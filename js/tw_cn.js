@@ -98,3 +98,5 @@ document.addEventListener('DOMContentLoaded', function () {
   translateInitialization()
   document.addEventListener('pjax:complete', translateInitialization)
 })
+
+
