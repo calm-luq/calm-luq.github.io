@@ -107,5 +107,8 @@
 <h2 id="增加搜索"><a href="#增加搜索" class="headerlink" title="增加搜索"></a>增加搜索</h2><p>npm install hexo-generator-searchdb –save<br>vim source&#x2F;_data&#x2F;butterfly.yml<br>localsearch改true</p>
 <h2 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h2><p>hexo手册<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a><br>butterfly文档<a href="https://butterfly.js.org/posts/21cfbf15/">https://butterfly.js.org/posts/21cfbf15/</a><br>改网站搜索免费社交图标<a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free">https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free</a><br>改网站顶置图片<a href="https://pic.netbian.com/4kdongman/">https://pic.netbian.com/4kdongman/</a><br>live2d内容网站：<br>api:github.com&#x2F;fghrsh&#x2F;live2d_api<br>模型:github.com&#x2F;summerscar&#x2F;live2dDemo<br>参考:<a href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a><br> waifu-tips.js 的详细设置说明，和 waifu-tips.json 节点说明，见<a href="https://github.com/fghrsh/live2d_demo">https://github.com/fghrsh/live2d_demo</a></p>
 ]]></content>
+      <tags>
+        <tag>hexo butterfly live2d</tag>
+      </tags>
   </entry>
 </search>
