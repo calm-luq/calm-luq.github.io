@@ -105,7 +105,7 @@
   <entry>
     <title>win下 hexo架构+butterfly主题+live2d看板娘 博客搭建</title>
     <url>/2022/03/09/win%E4%B8%8B-hexo%E6%9E%B6%E6%9E%84-butterfly%E4%B8%BB%E9%A2%98-live2d%E7%9C%8B%E6%9D%BF%E5%A8%98-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\css\APlayer.min.css"><script src="\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\js\Meting.min.js"></script><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要git<br>下载nodejs lts版本 nodejs.org&#x2F;zh-cn&#x2F;<br>安装时选择固定路径，勾选自动安装相关软件<br>cmd下： (或者git下用linux指令)<br>npm install -g cnpm –registry&#x3D;<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>cnpm install -g hexo-cli</p>
+    <content><![CDATA[<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要git<br>下载nodejs lts版本 nodejs.org&#x2F;zh-cn&#x2F;<br>安装时选择固定路径，勾选自动安装相关软件<br>cmd下： (或者git下用linux指令)<br>npm install -g cnpm –registry&#x3D;<a href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a><br>cnpm install -g hexo-cli</p>
 <h2 id="依次输入指令"><a href="#依次输入指令" class="headerlink" title="依次输入指令"></a>依次输入指令</h2><p>chdir查看当前目录<br>md blog或者mkdir E:\blog（最好不要blog，改个名字)<br>e:<br>cd e:\blog<br>进入根目录<br>hexo init<br>npm install<br>hexo s<br>hexo n “a”创建文件<br>cd source_posts<br>修改文件<br>cd..退回上一文件夹<br>hexo g本地静态保存<br>hexo s本地localhost:4000启动(在s后加  -p 改端口)</p>
 <h2 id="静态网页实现"><a href="#静态网页实现" class="headerlink" title="静态网页实现"></a>静态网页实现</h2><p>在gitee(要ppage)或者github上创建公开仓库.io结尾<br>cnpm install –save hexo-deployer-git<br>编辑_config.yml:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: 	</span><br><span class="line">	gitrepo: https://github.com/你的用户名.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
@@ -126,7 +126,7 @@
 <h2 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h2><p>hexo手册<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a><br>butterfly文档<a href="https://butterfly.js.org/posts/21cfbf15/">https://butterfly.js.org/posts/21cfbf15/</a><br>改网站搜索免费社交图标<a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free">https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free</a><br>改网站顶置图片<a href="https://pic.netbian.com/4kdongman/">https://pic.netbian.com/4kdongman/</a><br>live2d内容网站：<br>api:github.com&#x2F;fghrsh&#x2F;live2d_api<br>模型:github.com&#x2F;summerscar&#x2F;live2dDemo<br>参考:<a href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a><br> waifu-tips.js 的详细设置说明，和 waifu-tips.json 节点说明，见<a href="https://github.com/fghrsh/live2d_demo">https://github.com/fghrsh/live2d_demo</a></p>
 ]]></content>
       <tags>
-        <tag>hexo butterfly live2d</tag>
+        <tag>hexo博客</tag>
       </tags>
   </entry>
   <entry>
