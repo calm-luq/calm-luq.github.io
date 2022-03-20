@@ -873,4 +873,31 @@
         <tag>杂</tag>
       </tags>
   </entry>
+  <entry>
+    <title>中值定理、一元函数微分学应用</title>
+    <url>/2022/03/20/%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E3%80%81%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="中值定理、一元函数微分学应用"><a href="#中值定理、一元函数微分学应用" class="headerlink" title="中值定理、一元函数微分学应用"></a>中值定理、一元函数微分学应用</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<h2 id="定理"><a href="#定理" class="headerlink" title="定理"></a>定理</h2><p>闭区间连续，开区间可导的函数满足以下性质</p>
+<p>费马引理：<br>任意x属于u(x0)，满足f(x0)&gt;&#x3D;f(x)，有f’(x0)&#x3D;0</p>
+<p>罗尔定理(根据费马引理+介值定理可得)：<br>f(a)&#x3D;f(b)，有f’(x0)&#x3D;0，其中x0属于(a,b)</p>
+<p>拉格朗日中值定理(根据罗尔定理+辅助函数旋转坐标轴可得)：<br>f(b)-f(a)&#x3D;f’(x0)*(b-a)，其中x0属于(a,b)</p>
+<p>柯西中值定理(证明类似拉格朗日中值定理)：<br>(f(b)-f(a))&#x2F;(g(b)-g(a))&#x3D;f’(x0)&#x2F;g’(x0)，其中x0属于(a,b)</p>
+<h2 id="洛必达"><a href="#洛必达" class="headerlink" title="洛必达"></a>洛必达</h2><p>源于柯西中值定理<br>0&#x2F;0 或 ∞&#x2F;∞ 型分式 有f(x)&#x2F;F(x)&#x3D;f’(x)&#x2F;F’(x)<br>得出结果必须存在或∞或0&#x2F;0 或 ∞&#x2F;∞</p>
+<h2 id="泰勒展开"><a href="#泰勒展开" class="headerlink" title="泰勒展开"></a>泰勒展开</h2><p>f(x)&#x3D;∑( fn(x0) * (x-x0)^n&#x2F;n! )<br>x0&#x3D;0时为麦克劳伦公式，此时σ可写为θx，其中θ属于(0,1)<br>余项：<br>拉格朗日型 fn+1(σ) * (x-x0)^(n+1)&#x2F;(n+1)!<br>佩亚诺型 o(x^n)</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>单调性(一阶导数)(驻点,极值点)，凹凸性(二阶导数)</p>
+<p>曲率k &#x3D; y’’&#x2F;(1+y’)^(3&#x2F;2) 曲率半径ρ &#x3D; 1&#x2F;k</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>对于已给定的极限，且为0&#x2F;0型，有隐形条件 G(f(x))&#x3D;0</p>
+<p>对于已给定的极限，分式并且极限有正负，可根据保号性推断G(f(x))的正负</p>
+<p>对于复合函数的差，外层函数相同，内层可差，可用拉格朗日</p>
+<p>对于σ 等式的证明，可通过构造导数形式来证明</p>
+<p>对于渐进线的求法，斜求limy&#x2F;x&#x3D;k和lim(y-kx)&#x3D;b，垂找无穷间断点，平找x-&gt;∞</p>
+<p>求极限时用到麦克劳伦展开，如(√(1+x) + √(1-x) - 2)&#x2F;x^2<br>展开到o(x^2)即可</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
 </search>
