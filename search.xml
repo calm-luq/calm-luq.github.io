@@ -900,4 +900,25 @@
         <tag>math</tag>
       </tags>
   </entry>
+  <entry>
+    <title>cpp03</title>
+    <url>/2022/03/21/cpp03/</url>
+    <content><![CDATA[<h1 id="cpp03"><a href="#cpp03" class="headerlink" title="cpp03"></a>cpp03</h1><h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><p>结构体在一定程度上可以直接当作默认是共有属性的类<br>且cpp中结构体允许函数成员，且可以写权限限定词<br>所以struct和class写法几乎一样</p>
+<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>公有public：外部可访问，一般作内部数据接口<br>保护protected：外部不可访问<br>私有private：外部不可访问，不做继承处理</p>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span>  <span class="title class_">A</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">//没权限限定词默认为protected</span></span><br><span class="line">	<span class="type">int</span> a;</span><br><span class="line"><span class="keyword">public</span>:<span class="comment">//公有属性</span></span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">printData</span><span class="params">()</span> </span>&#123;cout&lt;&lt;m_name&lt;&lt;<span class="string">&#x27;\t&#x27;</span>&lt;&lt;m_age;&#125;</span><br><span class="line">	<span class="function"><span class="type">void</span> <span class="title">initData</span><span class="params">(string name, <span class="type">int</span> age)</span></span>;</span><br><span class="line"><span class="keyword">protected</span>:<span class="comment">//保护属性</span></span><br><span class="line">	string m_name;</span><br><span class="line"><span class="keyword">private</span>:<span class="comment">//私有属性</span></span><br><span class="line">	<span class="type">int</span> m_age;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">A::initData</span><span class="params">(string name, <span class="type">int</span> age)</span> </span>&#123;</span><br><span class="line">	m_name = name;</span><br><span class="line">	m_age = age;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="访问"><a href="#访问" class="headerlink" title="访问"></a>访问</h3><p>类外只能访问public(static除外)<br>方式同结构体</p>
+<p>对于外部不可访问的属性，要用接口</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function">string&amp; <span class="title">getName</span><span class="params">()</span> </span>&#123; <span class="keyword">return</span> m_name; &#125;<span class="comment">//引用接口，可修改内部参数</span></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">getAge</span><span class="params">()</span></span>&#123;<span class="keyword">return</span> m_age;&#125;<span class="comment">//值传递接口，无法修改内部参数</span></span><br><span class="line"><span class="keyword">protected</span>:</span><br><span class="line">	string m_name;</span><br><span class="line">	<span class="type">int</span> m_age;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="对象创建"><a href="#对象创建" class="headerlink" title="对象创建"></a>对象创建</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">A</span>&#123;</span><br><span class="line">    <span class="built_in">MM</span>();</span><br><span class="line">	<span class="built_in">MM</span>(<span class="type">int</span> a) &#123;&#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    A a0;</span><br><span class="line">    <span class="function">A <span class="title">a1</span><span class="params">(<span class="number">1</span>)</span></span>;</span><br><span class="line">    A* a2;</span><br><span class="line">    A* a3=<span class="keyword">new</span> A;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>cpp</category>
+      </categories>
+      <tags>
+        <tag>cpp</tag>
+      </tags>
+  </entry>
 </search>
