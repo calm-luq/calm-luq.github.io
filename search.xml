@@ -777,7 +777,7 @@
 <h3 id="泰勒展开"><a href="#泰勒展开" class="headerlink" title="泰勒展开"></a>泰勒展开</h3><p>精度最高</p>
 <h3 id="无穷小替换"><a href="#无穷小替换" class="headerlink" title="无穷小替换"></a>无穷小替换</h3><p>条件：因式<br>精度中等<br>x ~ sinx ~ tanx ~ arcsinx ~ arctanx ~ e^x-1 ~ ln(x+1) ~ (a^x-1)&#x2F;ln(a) ~ loga(x+1)ln(a) ~ ln(x+(x^2+1)^1&#x2F;2) ~ x&#x2F;(1+x)</p>
 <h3 id="洛必达"><a href="#洛必达" class="headerlink" title="洛必达"></a>洛必达</h3><p>条件：分式，上下可导 或 0&#x2F;0 或 ∞&#x2F;∞<br>精度低</p>
-<h3 id="重要极限-x→0"><a href="#重要极限-x→0" class="headerlink" title="重要极限(x→0)"></a>重要极限(x→0)</h3><p>(1+x)^(1&#x2F;x)&#x3D;e<br>sinx&#x2F;x&#x3D;1<br>(1-cosx)&#x2F;x^2&#x3D;(x-sinx)&#x2F;(x^3&#x2F;3)&#x3D;1&#x2F;2<br>(sec^2-1)&#x2F;x^2&#x3D;1</p>
+<h3 id="重要极限-x→0"><a href="#重要极限-x→0" class="headerlink" title="重要极限(x→0)"></a>重要极限(x→0)</h3><p>(1+x)^(1&#x2F;x)&#x3D;e<br>sinx&#x2F;x&#x3D;1<br>(1-cosx)&#x2F;x^2&#x3D;1&#x2F;2<br>(x-sinx)&#x2F;x^3&#x3D;1&#x2F;6<br>(sec^2-1)&#x2F;x^2&#x3D;1</p>
 <h2 id="连续、间断"><a href="#连续、间断" class="headerlink" title="连续、间断"></a>连续、间断</h2><p>定义一：存在dx则dy存在<br>定义二：f(x-)&#x3D;f(x)&#x3D;f(x+)<br>(基本)初等函数在D中连续，四则，符合，反函数仍在D连续</p>
 <p>第一类间断点：跳跃，可取<br>第二类间断点：无穷，震荡</p>
 <p>零点定理 &#x3D;&gt;  界值定理<br>一直连续性|f(x1)-f(x2)| &lt; σ</p>
