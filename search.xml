@@ -924,4 +924,40 @@
         <tag>cpp</tag>
       </tags>
   </entry>
+  <entry>
+    <title>git</title>
+    <url>/2022/03/28/git/</url>
+    <content><![CDATA[<h1 id="快速上手Git"><a href="#快速上手Git" class="headerlink" title="快速上手Git"></a>快速上手Git</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>windows版的下载地址<a href="https://git-scm.com/">Git (git-scm.com)</a></p>
+<p>linux版<br>Fedora用前者，Ubuntu用后者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum install git-core</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>右键桌面，选择git bash here</p>
+<h4 id="用户信息"><a href="#用户信息" class="headerlink" title="用户信息"></a>用户信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;这里写你的名字&quot;</span></span><br><span class="line">$ git config --global user.email 这里写你的邮箱</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用Git"><a href="#使用Git" class="headerlink" title="使用Git"></a>使用Git</h2><p>在需要备份的文件夹下，右键，选择git bash here</p>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<h3 id="拷贝项目"><a href="#拷贝项目" class="headerlink" title="拷贝项目"></a>拷贝项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> 这里写你要克隆的仓库</span><br></pre></td></tr></table></figure>
+
+<h3 id="项目保存到当地"><a href="#项目保存到当地" class="headerlink" title="项目保存到当地"></a>项目保存到当地</h3><p>在已经有git项目的文件夹下会有.git的隐藏文件，里面存储着本地的项目快照</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add 项目</span><br><span class="line">$ git commit -m <span class="string">&quot;备注信息&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>add相当于给文件夹拍照，commit相当于将照片保存</p>
+<h3 id="项目上传云端和从云端更新"><a href="#项目上传云端和从云端更新" class="headerlink" title="项目上传云端和从云端更新"></a>项目上传云端和从云端更新</h3><p>设置原创仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add 这里自定义仓库名 网址</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push 这里写要上传到的仓库 这里写需要上传的分支</span><br><span class="line">$ git fetch 这里写需要下载的仓库</span><br></pre></td></tr></table></figure>
+
+<h1 id="进阶使用"><a href="#进阶使用" class="headerlink" title="进阶使用"></a>进阶使用</h1><p>……待跟新</p>
+<h1 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h1><p><a href="http://git.oschina.net/progit/">Pro Git（中文版） (oschina.net)</a></p>
+]]></content>
+      <categories>
+        <category>cpp</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
 </search>
