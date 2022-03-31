@@ -960,4 +960,58 @@
         <tag>git</tag>
       </tags>
   </entry>
+  <entry>
+    <title>不定积分</title>
+    <url>/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
+    <content><![CDATA[<h1 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h1><p>f(x) + c &#x3D; ∫f’(x)dx<br>运算法则类似导数运算</p>
+<h2 id="求不定积分"><a href="#求不定积分" class="headerlink" title="求不定积分"></a>求不定积分</h2><p>从上到下检索变换规律，每次变化前检查是否能凑微分</p>
+<h3 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h3><p>对于两个初等函数乘积的积分(v&#x3D;反对幂指三)(先后)<br>∫vdu &#x3D; uv - ∫udv<br>注意：指三需要循环求</p>
+<h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><p>假分数：<br>通过除法变为真分数</p>
+<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>分母配方(平方和)</p>
+<h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)&#x2F;(cx+d)) 用 sin^2 + cos^2 &#x3D; 1<br>√(ax+b) 直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
+<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换降次<br>分母为去和差</p>
+<h2 id="积分表"><a href="#积分表" class="headerlink" title="积分表"></a>积分表</h2><p>大部分积分表同导数表<br>重要积分&#x2F;导数：</p>
+<table>
+<thead>
+<tr>
+<th>导数</th>
+<th>原函数</th>
+<th>导数</th>
+<th>原函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1&#x2F;(1+cosx)</td>
+<td>tan(x&#x2F;2)</td>
+<td>sin2x</td>
+<td>sin^2(x)</td>
+</tr>
+<tr>
+<td>tanx</td>
+<td>-In|cosx|</td>
+<td>cotx</td>
+<td>In|sinx|</td>
+</tr>
+<tr>
+<td>secx</td>
+<td>In|secx+tanx|</td>
+<td>cscx</td>
+<td>In|csc-cotx|</td>
+</tr>
+<tr>
+<td>sec^2(x)</td>
+<td>tanx</td>
+<td>secx * tanx</td>
+<td>sec(x)</td>
+</tr>
+</tbody></table>
+<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>倍角公式：cos2x &#x3D; cos^2(x) - sin^2(x) &#x3D; 1 -  2sin^2(x)<br>1 + tan^2 &#x3D; sec^2<br>1 &#x3D; cos^2 + sin^2<br>积化和差，和差化积</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
 </search>
