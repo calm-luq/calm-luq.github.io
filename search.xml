@@ -966,11 +966,14 @@
     <content><![CDATA[<h1 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
 <p>f(x) + c &#x3D; ∫f’(x)dx<br>运算法则类似导数运算</p>
 <h2 id="求不定积分"><a href="#求不定积分" class="headerlink" title="求不定积分"></a>求不定积分</h2><p>从上到下检索变换规律，每次变化前检查是否能凑微分</p>
-<h3 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h3><p>对于两个初等函数乘积的积分(v&#x3D;反对幂指三)(先后)<br>∫vdu &#x3D; uv - ∫udv<br>注意：指三需要循环求</p>
+<h2 id="绝对值"><a href="#绝对值" class="headerlink" title="绝对值"></a>绝对值</h2><p>分情况讨论</p>
+<h3 id="特定形式"><a href="#特定形式" class="headerlink" title="特定形式"></a>特定形式</h3><h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><p>对于两个初等函数乘积的积分(v&#x3D;反对幂指三)(先后)<br>∫vdu &#x3D; uv - ∫udv<br>注意：指三需要循环求</p>
+<h4 id="猜测法"><a href="#猜测法" class="headerlink" title="猜测法"></a>猜测法</h4><p>∫g(x)&#x2F;f(x)^2dx&#x3D;F(x)+c<br>设F(x)&#x3D;u(x)&#x2F;f(x)<br>则g&#x3D;u’f-uf’直接猜测法</p>
 <h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><p>假分数：<br>通过除法变为真分数</p>
-<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>分母配方(平方和)</p>
-<h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)&#x2F;(cx+d)) 用 sin^2 + cos^2 &#x3D; 1<br>√(ax+b) 直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
-<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换降次<br>分母为去和差</p>
+<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>对于三角则凑出类似下方格式来凑微分<br>$$<br>[a(sinx-cosx)+b(sinx+cos)]&#x2F;(sinx+cosx)<br>$$</p>
+<p>分母配方(平方和)</p>
+<h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)&#x2F;(cx+d)) 用 sin^2 + cos^2 &#x3D; 1<br>√(ax+b)或√(e^x+b)直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
+<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换<br>奇次凑微分<br>偶次降次<br>分母去和差<br>万能公式：sinx&#x3D;2u&#x2F;u^2+1 cosx&#x3D;(1-u^2)&#x2F;(1+u^2)</p>
 <h2 id="积分表"><a href="#积分表" class="headerlink" title="积分表"></a>积分表</h2><p>大部分积分表同导数表<br>重要积分&#x2F;导数：</p>
 <table>
 <thead>
@@ -1006,7 +1009,39 @@
 <td>sec(x)</td>
 </tr>
 </tbody></table>
-<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>倍角公式：cos2x &#x3D; cos^2(x) - sin^2(x) &#x3D; 1 -  2sin^2(x)<br>1 + tan^2 &#x3D; sec^2<br>1 &#x3D; cos^2 + sin^2<br>积化和差，和差化积</p>
+<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>cos2x &#x3D; cos^2(x) - sin^2(x) &#x3D; 1 -  2sin^2(x)<br>1 + tan^2 &#x3D; sec^2<br>1 &#x3D; cos^2 + sin^2<br>积化和差，和差化积</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>定积分及应用</title>
+    <url>/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="定积分及应用"><a href="#定积分及应用" class="headerlink" title="定积分及应用"></a>定积分及应用</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>f(x)，积分限，x轴围成面积的代数和<br>$$<br>S&#x3D;\int_{b}^{a} f(x)dx<br>\<br>\lim_{n\rightarrow+\infty} \sum_{n&#x3D;i}^{n}f(ε)dx_i&#x3D;<br>\int_{ε_i}^{ε_n}f(x)dx<br>\<br>\lim_{n\rightarrow+\infty}\frac{1}{n}\sum_{n&#x3D;i}^{n}f(\frac{i}{n})dx&#x3D;<br>\int_{1}^{0}f(x)dx<br>$$</p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>连续 或 有界+有限个间断点  &#x3D;&gt; 可积</p>
+<p>例子：1&#x2F;x不可积<br>$$<br>\int_{a}^{b}f(x)dx&#x3D;-\int_{b}^{a}f(x)dx &#x3D;&gt; \int_{a}^{a}f(x)dx&#x3D;0<br>\<br>\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx&#x3D;\int_{a}^{b}f(x)dx<br>\<br>f(x)≤g(x) &#x3D;&gt; \int_{a}^{b}f(x)dx≤\int_{a}^{b}g(x)dx<br>\<br>f(x)<em>{min}(b-a)≤\int</em>{a}^{b}f(x)dx≤f(x)<em>{max}(b-a)<br>\<br>\int</em>{-a}^{a}f(x)<em>奇dx&#x3D;0<br>\<br>\int</em>{-a}^{a}f(x)<em>偶dx&#x3D;2\int</em>{0}^{a}f(x)_偶dx<br>$$</p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>先分区间去绝对值</p>
+<p>根据性质化简</p>
+<p>后续计算同不定积分<br>$$<br>牛莱公式\<br>\int_{a}^{b}f’(x)dx&#x3D;[f(x)]<em>{a}^{b}\<br>积分中值\<br>\int</em>{a}^{b}f’(x)dx&#x3D;f’(σ)(b-a) , ; \space ~ 其中a≤σ≤b\<br>华里士(火花)公式\<br>\int_{0}^{\pi}xf(x)dx&#x3D;\frac{\pi}{2}\int_{0}^{\pi}f(x)dx\<br>I_n&#x3D;\int_{0}^{\frac{\pi}{2}}sin^nxdx&#x3D;\int_{0}^{\frac{\pi}{2}}cos^nxdx&#x3D;\frac{n-1}{n}I_{n-2}\<br>I_0&#x3D;\frac{\pi}{2},I_1&#x3D;1\<br>I_偶&#x3D;\frac{n-1}{n}*\frac{n-3}{n-2}……\frac{1}{2}*\frac{\pi}{2}\<br>I_奇&#x3D;\frac{n-1}{n}*\frac{n-3}{n-2}……\frac{2}{3}*1<br>$$</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>$$<br>分部积分<br>\<br>\int_{a}^{b}udv&#x3D;uv|<em>{a}^{b}-\int</em>{a}^{b}vdu<br>$$</p>
+<p>$$<br>三角还原的隐形条件<br>\<br>\int_{a}^{b}\sqrt{1-x^2}dx&#x3D;\int_{a}^{b}cosxdsinx&#x3D;\int_{a}^{b}sinxdcosx<br>$$</p>
+<h2 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h2><h3 id="广义积分"><a href="#广义积分" class="headerlink" title="广义积分"></a>广义积分</h3><p>区间无限，例<br>$$<br>\lim_{b\rightarrow+\infty}\int_{a}^{b}f(x)dx<br>$$</p>
+<h4 id="Γ函数"><a href="#Γ函数" class="headerlink" title="Γ函数"></a>Γ函数</h4><p>$$<br>Γ(α)&#x3D;\int_{0}^{+\infty}x^{α-1}e^{-x}dx\<br>Γ(α+1)&#x3D;αΓ(α)\<br>Γ(α)&#x3D;α!\<br>Γ(\frac{1}{2})&#x3D;\sqrt{\pi}\<br>$$</p>
+<h3 id="瑕积分"><a href="#瑕积分" class="headerlink" title="瑕积分"></a>瑕积分</h3><p>存在瑕点(无穷间断点)，例<br>$$<br>\lim_{b\rightarrow t^-}\int_{a}^{b}f(x)dx\其中t为瑕点即f(t)\rightarrow\infty<br>$$</p>
+<h3 id="审敛"><a href="#审敛" class="headerlink" title="审敛"></a>审敛</h3><h4 id="直接计算"><a href="#直接计算" class="headerlink" title="直接计算"></a>直接计算</h4><p>结果为无穷则发散，拆分积分限时，有一个发散则一定发散</p>
+<h4 id="比较法"><a href="#比较法" class="headerlink" title="比较法"></a>比较法</h4><p>原理：放缩后可积则原来一定可积</p>
+<h4 id="极限法"><a href="#极限法" class="headerlink" title="极限法"></a>极限法</h4><p>$$<br>a&gt;0\<br>\int_{a}^{b}\frac{dx}{(x-a)^q},,q&lt;1收敛，q≥1发散\<br>\int_{a}^{+\infty}\frac{dx}{x^q},,q&gt;1收敛，q≤1发散\<br>\int_{0}^{\infty}\frac{dx}{xIn^qx},,q&gt;1收敛，q≤1发散\<br>$$</p>
+<p>判断时利用同阶代换</p>
+<p>0越高阶越收敛，∞越低阶越收敛</p>
+<p>e^x最高阶，(Inx)^q最低阶</p>
+<h5 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h5><p>e^x出现均由其绝对</p>
+<p>当In单独出现或者和x相乘出现时才起作用</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>微元法：找到每dx占的一小份，求出通式后积分</p>
 ]]></content>
       <categories>
         <category>math</category>

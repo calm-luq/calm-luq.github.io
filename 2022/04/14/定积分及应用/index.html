@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>定积分及应用 | calm-luq-blog</title><meta name="keywords" content="math"><meta name="author" content="Luq"><meta name="copyright" content="Luq"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="定积分及应用注意：只收录方法和简易(重要)定义(用于复习) 定义f(x)，积分限，x轴围成面积的代数和$$S&#x3D;\int_{b}^{a} f(x)dx\\lim_{n\rightarrow+\infty} \sum_{n&#x3D;i}^{n}f(ε)dx_i&#x3D;\int_{ε_i}^{ε_n}f(x)dx\\lim_{n\rightarrow+\infty}\frac{1}{n}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="定积分及应用">
+<meta property="og:url" content="https://calm-luq.github.io/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/index.html">
+<meta property="og:site_name" content="calm-luq-blog">
+<meta property="og:description" content="定积分及应用注意：只收录方法和简易(重要)定义(用于复习) 定义f(x)，积分限，x轴围成面积的代数和$$S&#x3D;\int_{b}^{a} f(x)dx\\lim_{n\rightarrow+\infty} \sum_{n&#x3D;i}^{n}f(ε)dx_i&#x3D;\int_{ε_i}^{ε_n}f(x)dx\\lim_{n\rightarrow+\infty}\frac{1}{n}">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://calm-luq.github.io/cover&top_img/high_math.jpg">
+<meta property="article:published_time" content="2022-04-14T08:10:20.000Z">
+<meta property="article:modified_time" content="2022-04-14T12:53:22.808Z">
+<meta property="article:author" content="Luq">
+<meta property="article:tag" content="math">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://calm-luq.github.io/cover&top_img/high_math.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://calm-luq.github.io/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":5},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Luq","link":"链接: ","source":"来源: calm-luq-blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '定积分及应用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-14 20:53:22'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="live2d-widget/autoload.js"></script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.jpg'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/cover&amp;top_img/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/cover&amp;top_img/')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">calm-luq-blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/cover&amp;top_img/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">定积分及应用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-04-14T08:10:20.000Z" title="发表于 2022-04-14 16:10:20">2022-04-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-04-14T12:53:22.808Z" title="更新于 2022-04-14 20:53:22">2022-04-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/math/">math</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="定积分及应用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="定积分及应用"><a href="#定积分及应用" class="headerlink" title="定积分及应用"></a>定积分及应用</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>f(x)，积分限，x轴围成面积的代数和<br>$$<br>S&#x3D;\int_{b}^{a} f(x)dx<br>\<br>\lim_{n\rightarrow+\infty} \sum_{n&#x3D;i}^{n}f(ε)dx_i&#x3D;<br>\int_{ε_i}^{ε_n}f(x)dx<br>\<br>\lim_{n\rightarrow+\infty}\frac{1}{n}\sum_{n&#x3D;i}^{n}f(\frac{i}{n})dx&#x3D;<br>\int_{1}^{0}f(x)dx<br>$$</p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>连续 或 有界+有限个间断点  &#x3D;&gt; 可积</p>
+<p>例子：1&#x2F;x不可积<br>$$<br>\int_{a}^{b}f(x)dx&#x3D;-\int_{b}^{a}f(x)dx &#x3D;&gt; \int_{a}^{a}f(x)dx&#x3D;0<br>\<br>\int_{a}^{c}f(x)dx+\int_{c}^{b}f(x)dx&#x3D;\int_{a}^{b}f(x)dx<br>\<br>f(x)≤g(x) &#x3D;&gt; \int_{a}^{b}f(x)dx≤\int_{a}^{b}g(x)dx<br>\<br>f(x)<em>{min}(b-a)≤\int</em>{a}^{b}f(x)dx≤f(x)<em>{max}(b-a)<br>\<br>\int</em>{-a}^{a}f(x)<em>奇dx&#x3D;0<br>\<br>\int</em>{-a}^{a}f(x)<em>偶dx&#x3D;2\int</em>{0}^{a}f(x)_偶dx<br>$$</p>
+<h2 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h2><p>先分区间去绝对值</p>
+<p>根据性质化简</p>
+<p>后续计算同不定积分<br>$$<br>牛莱公式\<br>\int_{a}^{b}f’(x)dx&#x3D;[f(x)]<em>{a}^{b}\<br>积分中值\<br>\int</em>{a}^{b}f’(x)dx&#x3D;f’(σ)(b-a) , ; \space ~ 其中a≤σ≤b\<br>华里士(火花)公式\<br>\int_{0}^{\pi}xf(x)dx&#x3D;\frac{\pi}{2}\int_{0}^{\pi}f(x)dx\<br>I_n&#x3D;\int_{0}^{\frac{\pi}{2}}sin^nxdx&#x3D;\int_{0}^{\frac{\pi}{2}}cos^nxdx&#x3D;\frac{n-1}{n}I_{n-2}\<br>I_0&#x3D;\frac{\pi}{2},I_1&#x3D;1\<br>I_偶&#x3D;\frac{n-1}{n}*\frac{n-3}{n-2}……\frac{1}{2}*\frac{\pi}{2}\<br>I_奇&#x3D;\frac{n-1}{n}*\frac{n-3}{n-2}……\frac{2}{3}*1<br>$$</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>$$<br>分部积分<br>\<br>\int_{a}^{b}udv&#x3D;uv|<em>{a}^{b}-\int</em>{a}^{b}vdu<br>$$</p>
+<p>$$<br>三角还原的隐形条件<br>\<br>\int_{a}^{b}\sqrt{1-x^2}dx&#x3D;\int_{a}^{b}cosxdsinx&#x3D;\int_{a}^{b}sinxdcosx<br>$$</p>
+<h2 id="反常积分"><a href="#反常积分" class="headerlink" title="反常积分"></a>反常积分</h2><h3 id="广义积分"><a href="#广义积分" class="headerlink" title="广义积分"></a>广义积分</h3><p>区间无限，例<br>$$<br>\lim_{b\rightarrow+\infty}\int_{a}^{b}f(x)dx<br>$$</p>
+<h4 id="Γ函数"><a href="#Γ函数" class="headerlink" title="Γ函数"></a>Γ函数</h4><p>$$<br>Γ(α)&#x3D;\int_{0}^{+\infty}x^{α-1}e^{-x}dx\<br>Γ(α+1)&#x3D;αΓ(α)\<br>Γ(α)&#x3D;α!\<br>Γ(\frac{1}{2})&#x3D;\sqrt{\pi}\<br>$$</p>
+<h3 id="瑕积分"><a href="#瑕积分" class="headerlink" title="瑕积分"></a>瑕积分</h3><p>存在瑕点(无穷间断点)，例<br>$$<br>\lim_{b\rightarrow t^-}\int_{a}^{b}f(x)dx\其中t为瑕点即f(t)\rightarrow\infty<br>$$</p>
+<h3 id="审敛"><a href="#审敛" class="headerlink" title="审敛"></a>审敛</h3><h4 id="直接计算"><a href="#直接计算" class="headerlink" title="直接计算"></a>直接计算</h4><p>结果为无穷则发散，拆分积分限时，有一个发散则一定发散</p>
+<h4 id="比较法"><a href="#比较法" class="headerlink" title="比较法"></a>比较法</h4><p>原理：放缩后可积则原来一定可积</p>
+<h4 id="极限法"><a href="#极限法" class="headerlink" title="极限法"></a>极限法</h4><p>$$<br>a&gt;0\<br>\int_{a}^{b}\frac{dx}{(x-a)^q},,q&lt;1收敛，q≥1发散\<br>\int_{a}^{+\infty}\frac{dx}{x^q},,q&gt;1收敛，q≤1发散\<br>\int_{0}^{\infty}\frac{dx}{xIn^qx},,q&gt;1收敛，q≤1发散\<br>$$</p>
+<p>判断时利用同阶代换</p>
+<p>0越高阶越收敛，∞越低阶越收敛</p>
+<p>e^x最高阶，(Inx)^q最低阶</p>
+<h5 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h5><p>e^x出现均由其绝对</p>
+<p>当In单独出现或者和x相乘出现时才起作用</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>微元法：找到每dx占的一小份，求出通式后积分</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Luq</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://calm-luq.github.io/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/">https://calm-luq.github.io/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://calm-luq.github.io" target="_blank">calm-luq-blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/math/">math</a></div><div class="post_share"><div class="social-share" data-image="/cover&amp;top_img/high_math.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/"><img class="next-cover" src="/cover&amp;top_img/high_math.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">不定积分</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/03/14/%E5%87%BD%E6%95%B0%E3%80%81%E6%9E%81%E9%99%90%E3%80%81%E8%BF%9E%E7%BB%AD/" title="函数、极限、连续"><img class="cover" src="/cover&top_img/high_math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-14</div><div class="title">函数、极限、连续</div></div></a></div><div><a href="/2022/03/16/%E5%AF%BC%E6%95%B0%E3%80%81%E5%BE%AE%E5%88%86/" title="导数、微分"><img class="cover" src="/cover&top_img/high_math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-16</div><div class="title">导数、微分</div></div></a></div><div><a href="/2022/03/20/%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E3%80%81%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6%E5%BA%94%E7%94%A8/" title="中值定理、一元函数微分学应用"><img class="cover" src="/cover&top_img/high_math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-20</div><div class="title">中值定理、一元函数微分学应用</div></div></a></div><div><a href="/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" title="不定积分"><img class="cover" src="/cover&top_img/high_math.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-31</div><div class="title">不定积分</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.jpg'" alt="avatar"/></div><div class="author-info__name">Luq</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">37</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/calm-luq"><i class="fab fa-github"></i><span>My github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/calm-luq" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2307577741@qq.com" target="_blank" title="QQ.mail"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8"><span class="toc-number">1.</span> <span class="toc-text">定积分及应用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">1.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%B4%A8"><span class="toc-number">1.2.</span> <span class="toc-text">性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97"><span class="toc-number">1.3.</span> <span class="toc-text">计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">1.3.1.</span> <span class="toc-text">注意</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B8%B8%E7%A7%AF%E5%88%86"><span class="toc-number">1.4.</span> <span class="toc-text">反常积分</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%BF%E4%B9%89%E7%A7%AF%E5%88%86"><span class="toc-number">1.4.1.</span> <span class="toc-text">广义积分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%CE%93%E5%87%BD%E6%95%B0"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">Γ函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%91%95%E7%A7%AF%E5%88%86"><span class="toc-number">1.4.2.</span> <span class="toc-text">瑕积分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%A1%E6%95%9B"><span class="toc-number">1.4.3.</span> <span class="toc-text">审敛</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B4%E6%8E%A5%E8%AE%A1%E7%AE%97"><span class="toc-number">1.4.3.1.</span> <span class="toc-text">直接计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E6%B3%95"><span class="toc-number">1.4.3.2.</span> <span class="toc-text">比较法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%81%E9%99%90%E6%B3%95"><span class="toc-number">1.4.3.3.</span> <span class="toc-text">极限法</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F-1"><span class="toc-number">1.4.3.3.1.</span> <span class="toc-text">注意</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%94%E7%94%A8"><span class="toc-number">1.5.</span> <span class="toc-text">应用</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/" title="定积分及应用"><img src="/cover&amp;top_img/high_math.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="定积分及应用"/></a><div class="content"><a class="title" href="/2022/04/14/%E5%AE%9A%E7%A7%AF%E5%88%86%E5%8F%8A%E5%BA%94%E7%94%A8/" title="定积分及应用">定积分及应用</a><time datetime="2022-04-14T08:10:20.000Z" title="发表于 2022-04-14 16:10:20">2022-04-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" title="不定积分"><img src="/cover&amp;top_img/high_math.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="不定积分"/></a><div class="content"><a class="title" href="/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" title="不定积分">不定积分</a><time datetime="2022-03-31T06:04:00.000Z" title="发表于 2022-03-31 14:04:00">2022-03-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/28/git/" title="git"><img src="/cover&amp;top_img/git.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="git"/></a><div class="content"><a class="title" href="/2022/03/28/git/" title="git">git</a><time datetime="2022-03-28T15:12:17.000Z" title="发表于 2022-03-28 23:12:17">2022-03-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/21/cpp03/" title="cpp03"><img src="/cover&amp;top_img/cpp.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="cpp03"/></a><div class="content"><a class="title" href="/2022/03/21/cpp03/" title="cpp03">cpp03</a><time datetime="2022-03-21T14:01:43.000Z" title="发表于 2022-03-21 22:01:43">2022-03-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/03/20/%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E3%80%81%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6%E5%BA%94%E7%94%A8/" title="中值定理、一元函数微分学应用"><img src="/cover&amp;top_img/high_math.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="中值定理、一元函数微分学应用"/></a><div class="content"><a class="title" href="/2022/03/20/%E4%B8%AD%E5%80%BC%E5%AE%9A%E7%90%86%E3%80%81%E4%B8%80%E5%85%83%E5%87%BD%E6%95%B0%E5%BE%AE%E5%88%86%E5%AD%A6%E5%BA%94%E7%94%A8/" title="中值定理、一元函数微分学应用">中值定理、一元函数微分学应用</a><time datetime="2022-03-20T04:43:56.000Z" title="发表于 2022-03-20 12:43:56">2022-03-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By Luq</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="6668457648" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="false"> </div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="/true"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"log":false});</script></body></html>
