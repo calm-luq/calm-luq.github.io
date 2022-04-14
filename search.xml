@@ -1050,4 +1050,19 @@
         <tag>math</tag>
       </tags>
   </entry>
+  <entry>
+    <title>c语言补充</title>
+    <url>/2022/04/14/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E5%85%85/</url>
+    <content><![CDATA[<h1 id="c语言补充"><a href="#c语言补充" class="headerlink" title="c语言补充"></a>c语言补充</h1><h2 id="库：string-h"><a href="#库：string-h" class="headerlink" title="库：string.h"></a>库：string.h</h2><p>函数：char * strtok(char * str,const char * delim)<br>功能：从str[0]开始往后查找delim，找到后返回delim前的子串，否则返回NULL</p>
+<p>函数：char * strchr(const char * str, int c)<br>功能：从str[0]开始往后查找c，找到后返回该位置，否则返回NULL</p>
+<h2 id="库：stdlib-h"><a href="#库：stdlib-h" class="headerlink" title="库：stdlib.h"></a>库：stdlib.h</h2><p>函数：int atoi(const char * str)<br>功能：转换字符串为整数，没有执行有效转换则返回零</p>
+<h2 id="库：stdio-h"><a href="#库：stdio-h" class="headerlink" title="库：stdio.h"></a>库：stdio.h</h2><p>函数：int sprintf(char * str, const char * format, …)<br>功能：向str写入format内容(可插入标签)，…为标签参数，返回写入字符数</p>
+]]></content>
+      <categories>
+        <category>c</category>
+      </categories>
+      <tags>
+        <tag>c</tag>
+      </tags>
+  </entry>
 </search>
