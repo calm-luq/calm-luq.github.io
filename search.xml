@@ -139,6 +139,12 @@
 <p>make clean即递归删除所有.o文件</p>
 <p>##其余简略符号可以自行学习记忆</p>
 ]]></content>
+      <categories>
+        <category>cpp</category>
+      </categories>
+      <tags>
+        <tag>cpp</tag>
+      </tags>
   </entry>
   <entry>
     <title>c语言01</title>
@@ -670,24 +676,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/02/05/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>写博客简易快捷桌面脚本</title>
     <url>/2022/03/14/%E5%86%99%E5%8D%9A%E5%AE%A2%E5%BF%AB%E6%8D%B7%E6%A1%8C%E9%9D%A2%E8%84%9A%E6%9C%AC/</url>
     <content><![CDATA[<h1 id="写博客简易快捷桌面脚本"><a href="#写博客简易快捷桌面脚本" class="headerlink" title="写博客简易快捷桌面脚本"></a>写博客简易快捷桌面脚本</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>新建记事本.txt复制以下代码<br>修改代码中的  你博客所在的位置<br>另存为写博客.bat，编码改为ansi</p>
@@ -970,7 +958,7 @@
 <h3 id="特定形式"><a href="#特定形式" class="headerlink" title="特定形式"></a>特定形式</h3><h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><p>对于两个初等函数乘积的积分(v&#x3D;反对幂指三)(先后)<br>∫vdu &#x3D; uv - ∫udv<br>注意：指三需要循环求</p>
 <h4 id="猜测法"><a href="#猜测法" class="headerlink" title="猜测法"></a>猜测法</h4><p>∫g(x)&#x2F;f(x)^2dx&#x3D;F(x)+c<br>设F(x)&#x3D;u(x)&#x2F;f(x)<br>则g&#x3D;u’f-uf’直接猜测法</p>
 <h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><p>假分数：<br>通过除法变为真分数</p>
-<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>对于三角则凑出类似下方格式来凑微分<br>$$<br>[a(sinx-cosx)+b(sinx+cos)]&#x2F;(sinx+cosx)<br>$$</p>
+<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>对于三角则凑出类似下方格式来凑微分 即 [A(导数)+B(原函数)]&#x2F;原函数<br>$$<br>[a(sinx-cosx)+b(sinx+cos)]&#x2F;(sinx+cosx)<br>$$</p>
 <p>分母配方(平方和)</p>
 <h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)&#x2F;(cx+d)) 用 sin^2 + cos^2 &#x3D; 1<br>√(ax+b)或√(e^x+b)直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
 <h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换<br>奇次凑微分<br>偶次降次<br>分母去和差<br>万能公式：sinx&#x3D;2u&#x2F;u^2+1 cosx&#x3D;(1-u^2)&#x2F;(1+u^2)</p>
@@ -1054,7 +1042,7 @@
     <title>c语言补充</title>
     <url>/2022/04/14/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E5%85%85/</url>
     <content><![CDATA[<h1 id="c语言补充"><a href="#c语言补充" class="headerlink" title="c语言补充"></a>c语言补充</h1><h2 id="库：string-h"><a href="#库：string-h" class="headerlink" title="库：string.h"></a>库：string.h</h2><p>函数：char * strtok(char * str,const char * delim)<br>功能：从str[0]开始往后查找delim，找到后返回delim前的子串，否则返回NULL</p>
-<p>函数：char * strchr(const char * str, int c)<br>功能：从str[0]开始往后查找c，找到后返回该位置，否则返回NULL</p>
+<p>函数：char * strchr(const char * str, int c)<br>功能：从str[0]开始往后查找c，找到后返回该位置，否则返回NULL<br>注意：第一次调用strtok必须将C字符串传入<br>            后续调用必须指定NULL为第一个参数,它告诉函数继续对您首先传入的字符串进行标记</p>
 <h2 id="库：stdlib-h"><a href="#库：stdlib-h" class="headerlink" title="库：stdlib.h"></a>库：stdlib.h</h2><p>函数：int atoi(const char * str)<br>功能：转换字符串为整数，没有执行有效转换则返回零</p>
 <h2 id="库：stdio-h"><a href="#库：stdio-h" class="headerlink" title="库：stdio.h"></a>库：stdio.h</h2><p>函数：int sprintf(char * str, const char * format, …)<br>功能：向str写入format内容(可插入标签)，…为标签参数，返回写入字符数</p>
 ]]></content>
@@ -1063,6 +1051,86 @@
       </categories>
       <tags>
         <tag>c</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nas介绍</title>
+    <url>/2022/04/21/nas%E4%BB%8B%E7%BB%8D/</url>
+    <content><![CDATA[<h1 id="NAS介绍"><a href="#NAS介绍" class="headerlink" title="NAS介绍"></a>NAS介绍</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>NAS（Network Attached Storage：网络附属存储）</p>
+<p>相当于一个有好几块硬盘的<strong>低功耗</strong>电脑，硬盘中装了文件服务器和备份用的软件等等，让电脑专门用于存储。</p>
+<p>把这个电脑连到家里网上，相当于实现了一个(某度)云盘。</p>
+<h2 id="用途"><a href="#用途" class="headerlink" title="用途"></a>用途</h2><p>作为家庭数据中心</p>
+<p>将资料放进 NAS，透过网络可以随时存取在 NAS 中的文件，还可以精确地管理与控制 NAS 的访问权限</p>
+<p>NAS 支持 RAID 资料保护，让资料备份更加安全</p>
+<p>支持多人在线访问文件</p>
+<p>作为下载机，虚拟机</p>
+<p>架设私有 VPN，架设私有云</p>
+<p>……</p>
+<p>总的来说：NAS 实际上就是一个私有云服务器，可以自己增删功能</p>
+<h2 id="方案"><a href="#方案" class="headerlink" title="方案"></a>方案</h2><h3 id="购买"><a href="#购买" class="headerlink" title="购买"></a>购买</h3><p>目前市面上有很多 NAS 服务可供选择，如 win10 或 win server 做系统服务器。但家用NAS主机的功能并不丰富。目前主流的 NAS 系统是基于 Linux 系统二度开发的群晖和威联通主机，这两者在国内的普及率较高，功能和APP适配也比较完善</p>
+<h3 id="DIY"><a href="#DIY" class="headerlink" title="DIY"></a>DIY</h3><p>无论是闲置的主机还是笔记本都可以作为NAS主机</p>
+<p>功耗-电费问题例子：30天 * 24小时 * 50瓦 * 0.6元&#x2F;度 * 1度&#x2F;千瓦时 &#x3D; 21.6元&#x2F;月<br>一般cpu待机功耗在25w左右</p>
+<h4 id="优势"><a href="#优势" class="headerlink" title="优势"></a>优势</h4><p>性价比超高<br>与其他各种功能集成<br>扩展性强</p>
+<h4 id="NAS主机的选择"><a href="#NAS主机的选择" class="headerlink" title="NAS主机的选择"></a>NAS主机的选择</h4><p>如：蜗牛星际主机，J1900或华擎J3455集成主板，猫盘(学习，随便玩玩)</p>
+<p>下面是推荐优先级</p>
+<p>手工搭建 &gt; 套件(蜗牛星际主机) &gt; 自己家里闲置的</p>
+<h4 id="NAS系统的选择"><a href="#NAS系统的选择" class="headerlink" title="NAS系统的选择"></a>NAS系统的选择</h4><p>入门的话，群晖和威联通是最好的选择<br>这两大系统界面友好，功能强大，所配的套件齐全<br>对于入门和家庭使用已经完全足够了</p>
+<p>如果要实现更丰富功能，要用更专业的NAS系统，如：FreeNAS、UNRIAD 、OVM等</p>
+<h4 id="NAS硬盘的选择"><a href="#NAS硬盘的选择" class="headerlink" title="NAS硬盘的选择"></a>NAS硬盘的选择</h4><p>硬盘是nas最大的开销，花钱越多容量越大</p>
+<p>有条件，可以上西数红盘，希捷酷狼之类的NAS专用盘，企业级的黑盘也是好选择</p>
+<h2 id="提醒"><a href="#提醒" class="headerlink" title="提醒"></a>提醒</h2><p>nas 是用来用的，尽量以自己的需求和能力进行选择，不要一味想着用最好的，想让性能拉满，也不要为了折腾而折腾，做好了要拿来用，不要吃灰，毕竟 nas 主要作为家庭数据中心，家人用着好才是真的好。</p>
+]]></content>
+      <categories>
+        <category>nas</category>
+      </categories>
+      <tags>
+        <tag>nas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>nas制作</title>
+    <url>/2022/04/21/nas%E5%88%B6%E4%BD%9C/</url>
+    <content><![CDATA[<h1 id="nas制作"><a href="#nas制作" class="headerlink" title="nas制作"></a>nas制作</h1><p>以下diy流程仅供参考</p>
+<h2 id="硬件部分"><a href="#硬件部分" class="headerlink" title="硬件部分"></a>硬件部分</h2><h3 id="需要材料"><a href="#需要材料" class="headerlink" title="需要材料"></a>需要材料</h3><p><strong>cpu</strong></p>
+<p>使用低功耗u，不考虑性能，因为是24小时低强度工作</p>
+<p><strong>主板</strong></p>
+<p>可以选择NAS的集成主板，如：J1900、J3160、J3355</p>
+<p>如果使用其他主板时要注意：有千兆以上的网口&#x2F;网卡，尽量多的sata3(理论传输速率达到了6Gbps)，使用itx或者matx，让nas体积尽量小</p>
+<p><strong>内存</strong></p>
+<p>4g即可，使用主板对应内存</p>
+<p>如：</p>
+<p>平台              型号      频率                                内存大小<br>台式&#x2F;笔记本 ddr3&#x2F;4 1333&#x2F;1600&#x2F;2133&#x2F;2400 4G</p>
+<p><strong>电源</strong></p>
+<p>型号可选：dc-atx，itx电源(小1u)(模组)，atx(模组)</p>
+<p>瓦数选择200w~400w</p>
+<p><strong>机箱</strong></p>
+<p>可以选择普通大机箱，itx机箱，开放式机箱，亚克力自制机箱</p>
+<p>取决于你要装什么主板，什么电源，多少硬盘</p>
+<p><strong>其他配件</strong></p>
+<p>sata线，千兆网线，u盘(需要一直使用)，机械&#x2F;固态硬盘</p>
+<h3 id="抄作业"><a href="#抄作业" class="headerlink" title="抄作业"></a>抄作业</h3><p>方案1(懒人款)：蜗牛星际，小白or懒得折腾选这个，建议换个风扇和电源</p>
+<p>方案2(进阶款)：J3455ITX，两条ddr3 1600 2G，酷鱼MGP机箱，dc-atx电源150w，2个2.5寸机械盘(最多4个但要改电源)</p>
+<p>方案3(垃圾佬看这里)：J1800 或者 星际魔盒(注意矿渣) 或者 随便淘个小主机 再或者 用猫盘吧 0^0  注意再注意！一定要控制功耗！</p>
+<h2 id="系统部分"><a href="#系统部分" class="headerlink" title="系统部分"></a>系统部分</h2><p>系统选择使用群晖</p>
+<p>准备：nas网线连接光猫或路由器然后开机，手机下载群晖管家app，让手机和nas处于同一网络下  </p>
+<p>安装：手机打开app-&gt;点击”设置新NAS”-&gt;注册群晖账户-&gt;点击安装-&gt;设置NAS的用户名和密码和外网访问ID</p>
+<p>其他：需要换主机选择迁移即可，硬盘坏了raid恢复即可</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>登录：</p>
+<p>在管理管家可以看到nas的ip地址<br>然后在手机(和nas同一网络下的设备均可)输入该网站<br>输入nas账户密码进行登录</p>
+<p>总览：</p>
+<p>点击左上角可以展开查看全部应用<br>右侧隐藏栏是系统通知<br>套件中心相当于应用商店，其中的社群中还有许多个人分享的应用</p>
+<p>快速入门：</p>
+<p>点击控制面板</p>
+<p>这是设置基础服务的地方，可在右上方打开高级模式</p>
+<p>存储空间管理员可以看到所有硬盘，点击存储池，点击新建，选择灵活度提高后下一步，可以设置名字和选择raid类别(选择时会有介绍，不用raid选basic)，后续为默认设置，点击应用等待显示正常，然后点击存储空间，点击新建，选择刚刚新建的存储池，保持默认设置，点击应用等待显示正常即可。</p>
+<p>quickconnect确认启用，这个用于外网访问</p>
+<p>网络可以设置系统名字，建议启用手动配置dns服务器8.8.8.8和114.114.114.114，在上方选择网络界面，选择当前已联机网络，选择编辑，手动设置网络配置192.168.1.x(0~255，注意避免和nas的ip冲突)和255.255.255.0和192.168.1.1和192.168.1.1，若有多条网线则可以多路聚合，新建bond即可</p>
+]]></content>
+      <categories>
+        <category>nas</category>
+      </categories>
+      <tags>
+        <tag>nas</tag>
       </tags>
   </entry>
 </search>
