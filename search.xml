@@ -997,7 +997,7 @@
 <td>sec(x)</td>
 </tr>
 </tbody></table>
-<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>cos2x &#x3D; cos^2(x) - sin^2(x) &#x3D; 1 -  2sin^2(x)<br>1 + tan^2 &#x3D; sec^2<br>1 &#x3D; cos^2 + sin^2<br>1-sinx&#x3D;(sin2&#x2F;x - cosx&#x2F;2)^2<br>积化和差，和差化积</p>
+<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>cos2x &#x3D; cos^2(x) - sin^2(x) &#x3D; 1 -  2sin^2(x)<br>1 + tan^2 &#x3D; sec^2<br>1 &#x3D; cos^2 + sin^2<br>1-sinx&#x3D;(sin2&#x2F;x - cosx&#x2F;2)^2<br>(1+sinx)&#x2F;(1+cosx)&#x3D;sec^2(x&#x2F;2) &#x2F;2 + tan(x&#x2F;2)此条常用于e^x(f+f’)<br>tan(x&#x2F;2)&#x3D;sinx&#x2F;(1+cosx)<br>1&#x2F;(a+bcosx)&#x3D;1&#x2F;(m+kcos^2(x))此条常用于常数加三件作为分母<br>&#x3D;sec^2(x)&#x2F;(msec^2(x)+k)&#x3D;dtanx&#x2F;(mtanx+m+k)<br>积化和差，和差化积</p>
 ]]></content>
       <categories>
         <category>math</category>
@@ -1118,7 +1118,7 @@
 <h3 id="总览"><a href="#总览" class="headerlink" title="总览"></a>总览</h3><p>点击左上角可以展开查看全部应用<br>右侧隐藏栏是系统通知<br>套件中心相当于应用商店，其中的社群中还有许多个人分享的应用</p>
 <h3 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h3><p>找到存储空间管理员，点击存储池，点击新建，选择灵活度提高(不需备份选择性能改善)，设置名字，选择raid类别，后续为默认设置，点击应用等待显示正常</p>
 <p>点击存储空间，点击新建，选择刚刚新建的存储池，保持默认设置，点击应用等待显示正常</p>
-<p>quickconnect确认启用，记住<strong>ID和域名</strong>（用于外网访问）</p>
+<p>quickconnect确认启用，记住<strong>ID和域名</strong>（用于外网访问）<br>如果是公网ip可以使用ddns</p>
 <p>网络可以设置系统名字，建议启用手动配置dns服务器8.8.8.8和114.114.114.114</p>
 <p>在上方选择网络界面，选择当前已联机网络，选择编辑，手动设置网络配置<strong>nas的外网ip地址</strong>(外网设备地址)192.168.1.x(0~255，注意避免和nas的ip冲突)，255.255.255.0，若有多条网线则可以多路聚合，新建bond即可</p>
 <p>进入路由器后台(一般为192.168.1.1)，找到nat虚拟服务器，新增条目，wan接口选择ppp2.3，自定义服务名称，(lan侧服务器)ip地址输入<strong>nas的外网ip地址</strong>，设置外部端口(<strong>外网访问时填的端口号</strong>)，设置内部端口(nas提供的服务端口)，选择协议</p>
@@ -1208,9 +1208,9 @@
 <p>拔下u盘插到nas上，连接网线硬盘<br>开机按Del键进入Bios,选择硬盘为第一启动项，保存退出后重启<br>显示happy hacking为引导完成</p>
 <p>后续同白群晖操作</p>
 <p>注意不要登陆quickconnect</p>
-<p>可以Frp内网穿透</p>
-<p>可以自行洗白</p>
 <h3 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h3><p> <a href="https://pan.baidu.com/s/10SeShlkCsWRmnO8eCYUQ9A#list/path=%2F">黑群晖_免费高速下载|百度网盘-分享无限制 (baidu.com)</a><br>6aba</p>
+<h3 id="洗白"><a href="#洗白" class="headerlink" title="洗白"></a>洗白</h3><p>黑群晖不可以使用QC，预览图为黑色，无法调节码率等<br>半洗白不可以使用QC<br>洗白同白群晖</p>
+<h4 id="半洗白方法"><a href="#半洗白方法" class="headerlink" title="半洗白方法"></a>半洗白方法</h4><p>套件中心安装virtual machine manager<br>映像-新增-从Synology下载<br>虚拟机-新增-Synology virtual DSM<br>虚拟机-开机-使用已有许可证<br>登录虚拟机后台-信息中心看序列号<br>替换u盘的引导程序里的sn即可 或者 ssh修改内核文件</p>
 <h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><p>可以参考</p>
 <p><a href="https://blog.csdn.net/wxb915397070/article/details/111953722?ops_request_misc=%7B%22request_id%22:%22165079147616782184650676%22,%22scm%22:%2220140713.130102334.pc_all.%22%7D&request_id=165079147616782184650676&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-111953722.142%5Ev9%5Econtrol,157%5Ev4%5Econtrol&utm_term=%E7%BE%A4%E8%BE%89NAS%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E7%9A%84%E6%89%80%E6%9C%89&spm=1018.2226.3001.4187">群晖NAS从入门到精通的所有帖子汇总，只要这一篇就够了!_酒醉疯子的博客-CSDN博客_群晖</a></p>
 ]]></content>
@@ -1219,6 +1219,34 @@
       </categories>
       <tags>
         <tag>nas</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>微分方程</title>
+    <url>/2022/04/29/%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="微分方程"><a href="#微分方程" class="headerlink" title="微分方程"></a>微分方程</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<p>方程最高阶&#x3D;方程的阶&#x3D;通解中任意常数的个数</p>
+<p>y(n)+P(x)y(n-1)……Q(x)y(1)&#x3D;f(x)<br>f(x)&#x3D;0为齐次</p>
+<p>解的结构为：齐次通解 + 特解</p>
+<h2 id="一阶线性微分方程"><a href="#一阶线性微分方程" class="headerlink" title="一阶线性微分方程"></a>一阶线性微分方程</h2><h3 id="齐次"><a href="#齐次" class="headerlink" title="齐次"></a>齐次</h3><p>分离x和y在等式两边，然后两边同时积分，称分离变量</p>
+<p>分式不能直接分离时，分式同除x，构造u&#x3D;y&#x2F;x，得y’&#x3D;u’x+u再分离变量</p>
+<h3 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h3><h4 id="分式有常数不可以同除"><a href="#分式有常数不可以同除" class="headerlink" title="分式有常数不可以同除"></a>分式有常数不可以同除</h4><p>发现x和y在分子和分母系数成比例，则改为设u&#x3D;ax+by，此时y’&#x3D;(du&#x2F;dx - a)&#x2F;b&#x3D;(u+c)&#x2F;(ku+d)直接解得<br>否则构造X&#x3D;x+c，Y&#x3D;y+d变为求齐次分式</p>
+<h4 id="标准结构y’-Qy-x3D-P"><a href="#标准结构y’-Qy-x3D-P" class="headerlink" title="标准结构y’+Qy&#x3D;P"></a>标准结构y’+Qy&#x3D;P</h4><p>y&#x3D;ce^(-∫Pdx)+e^(-∫Pdx)*∫Qe^(∫Pdx)dx<br>解的性质：有y1,y2为特解，y1-y2则为齐次通解，(y1+y2)&#x2F;2为通解</p>
+<h4 id="伯努利"><a href="#伯努利" class="headerlink" title="伯努利"></a>伯努利</h4><p>y’+py&#x3D;qy^n &#x3D;&gt; y‘y^(-n)+py^(1-n)&#x3D;q &#x3D;&gt; z’+pz&#x3D;q 其中z&#x3D;y^(1-n)</p>
+<h2 id="二阶线性微分方程"><a href="#二阶线性微分方程" class="headerlink" title="二阶线性微分方程"></a>二阶线性微分方程</h2><h3 id="y’’-x3D-f-x"><a href="#y’’-x3D-f-x" class="headerlink" title="y’’&#x3D;f(x)"></a>y’’&#x3D;f(x)</h3><p>积分降阶</p>
+<h3 id="y’’-x3D-f-x-y’"><a href="#y’’-x3D-f-x-y’" class="headerlink" title="y’’&#x3D;f(x,y’)"></a>y’’&#x3D;f(x,y’)</h3><p>设p&#x3D;y’，y’’&#x3D;p’&#x3D;f(x,p’)，变为一阶</p>
+<h3 id="y’’-x3D-f-y-y’"><a href="#y’’-x3D-f-y-y’" class="headerlink" title="y’’&#x3D;f(y,y’)"></a>y’’&#x3D;f(y,y’)</h3><p>设p&#x3D;y’，y’’&#x3D;p*dp&#x2F;dy&#x3D;f(y,p’)，变为一阶</p>
+<h3 id="标准结构y’’-py‘-qy-x3D-F"><a href="#标准结构y’’-py‘-qy-x3D-F" class="headerlink" title="标准结构y’’+py‘+qy&#x3D;F"></a>标准结构y’’+py‘+qy&#x3D;F</h3><h4 id="齐次且p-q为常数"><a href="#齐次且p-q为常数" class="headerlink" title="齐次且p,q为常数"></a>齐次且p,q为常数</h4><p>设y&#x3D;e^(rx)，得r^2+pr+q&#x3D;0<br>求得r1≠r2，y&#x3D;C1e^(r1x)+C2e^(r2x)<br>求得r1&#x3D;r2，y&#x3D;C1e^(r1x)+C2xe^(r2x)<br>求得r&#x3D;a±bi，y&#x3D;e^(ax)(C1sinbx+C2cosbx)</p>
+<h4 id="非齐次且p-q为常数且F-x3D-Re-kx"><a href="#非齐次且p-q为常数且F-x3D-Re-kx" class="headerlink" title="非齐次且p,q为常数且F&#x3D;Re^kx"></a>非齐次且p,q为常数且F&#x3D;Re^kx</h4><p>r 为 多项式 或 多项式sinbx+多项式cosbx</p>
+<p>求出齐次方程r后，根据F(x)假设 y&#x3D;Re^kx<br>此时R终端常数换为变量，若k&#x3D;r1则R需乘上x，若k&#x3D;r1&#x3D;r2则R需乘上x^2<br>带入原式求得变量即为特解，加上齐次通解则为y</p>
+<h2 id="叠加原理"><a href="#叠加原理" class="headerlink" title="叠加原理"></a>叠加原理</h2><p>对于非齐次F&#x3D;f1+f2<br>可以使原式分别等于f1,f2求出特解y1,y2<br>y1+y2则为原式的特解</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>再求原函数y&#x3D;f(x)时求的是特解，要找f(x)隐藏的初始条件</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
       </tags>
   </entry>
 </search>
