@@ -1249,4 +1249,40 @@
         <tag>math</tag>
       </tags>
   </entry>
+  <entry>
+    <title>向量代数与空间解析几何</title>
+    <url>/2022/05/13/%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<h1 id="向量代数与空间解析几何"><a href="#向量代数与空间解析几何" class="headerlink" title="向量代数与空间解析几何"></a>向量代数与空间解析几何</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><h3 id="方向角"><a href="#方向角" class="headerlink" title="方向角"></a>方向角</h3><p>cosA&#x3D;x&#x2F;|<strong>r</strong>|   cosB&#x3D;y&#x2F;|<strong>r</strong>|   cosC&#x3D;z&#x2F;|<strong>r</strong>|<br>cos^2(A)+cos^2(B)+cos^2(C)&#x3D;1<br>{cosA，cosB，cosC}&#x3D;<strong>r</strong>&#x2F;|<strong>r</strong>|</p>
+<h3 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h3><p>$$<br>a·b &#x3D; |a||b|cos&lt;a,b&gt; &#x3D; a_xb_x+a_yb_y+a_zb_z &#x3D; a*(b在a上的投影)<br>$$</p>
+<h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><p>$$<br>a × b &#x3D; |a||b|sin&lt;a,b&gt;&#x3D;\left|<br>\begin{array}{cccc}<br>i&amp;j&amp;k \<br>a_x&amp;a_y&amp;a_z\<br>b_x&amp;b_y&amp;b_z<br>\end{array}<br>\right|&#x3D;<br>a和b形成的平行四边形面积<br>$$</p>
+<p> 方向为右手食指由a绕向b时拇指方向 </p>
+<h3 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h3><p>$$<br>[abc]&#x3D;a×b·c&#x3D;\left|\begin{array}{cccc}<br>c_x&amp;c_y&amp;c_z\<br>a_x&amp;a_y&amp;a_z\<br>b_x&amp;b_y&amp;b_z<br>\end{array}<br>\right|&#x3D;<br>a,b和c形成的平行六面体体积<br>$$</p>
+<h2 id="空间平面方程"><a href="#空间平面方程" class="headerlink" title="空间平面方程"></a>空间平面方程</h2><p>点法式：A(x-x0)+B(y-y0)+C(z-z0)&#x3D;0，其中(x0,y0,z0)为面上一点，(A,B,C)为法线<br>利用叉乘可以求法线</p>
+<p>截距式：x&#x2F;a+y&#x2F;b+z&#x2F;c&#x3D;1，其中a,b,c为面在x,y,z轴上的截距</p>
+<p>一般式：由点法式化简括号得</p>
+<h2 id="空间直线方程"><a href="#空间直线方程" class="headerlink" title="空间直线方程"></a>空间直线方程</h2><p>点向(对称)式：(x-x0)&#x2F;m&#x3D;(y-y0)&#x2F;n&#x3D;(z-z0)&#x2F;p，其中(x0,y0,z0)为线上一点，(m,n,p)为与直线平行的方向向量</p>
+<p>参数式：由点向式得 x&#x3D;mt+x0 y&#x3D;nt+y0 z&#x3D;pt+z0</p>
+<p>一般式：两个平面方程的交集<br>通过两个平面的法线叉乘可以的到与直线平行的向量，再通过解方程求出1点，即可转化为点向式</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="夹角"><a href="#夹角" class="headerlink" title="夹角"></a>夹角</h3><p>面面角(不大于90°)：cosθ&#x3D;|n1·n2|&#x2F;|n1||n2|，其中n1,n2分别为两个平面的法向量</p>
+<p>线线角：cosθ&#x3D;|s1·s2|&#x2F;|s1||s2|，其中s1,s2分别为两条直线方向向量</p>
+<p>线面角(不大于90°)：sin&#x3D;|s1·n1|&#x2F;|s1||n1|，其中s1,n1分别为直线方向向量和平面的法向量</p>
+<h3 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h3><p>两到点：d&#x3D;√((x2-x1)^2+(y2-y1)^2+(z2-z1)^2)</p>
+<p>点到线：参数式设线上一点，求 两点最小值 或者 距离向量·方向向量 得到垂足点，求点到点距离即可 </p>
+<p>点到面：d&#x3D;|M1M2 · n|&#x2F;|n|，其中M1M2为点到面上的任一向量，平面的法向量</p>
+<p>线到面：同点到面</p>
+<p>面到面：同点到面，d&#x3D;|D1-D2|&#x2F;|n|，其中D1,D2为两个平面的方程同系数时的常数项  </p>
+<p>线到线：s1×s2·M1M2≠0异面，其中s1,s2分别为两条直线方向向量，M1M2为两直线上点形成的任一向量<br>做平行线使两直线在同一平面，取原直线一点，求点到面距离即可</p>
+<h3 id="线面投影、平面束"><a href="#线面投影、平面束" class="headerlink" title="线面投影、平面束"></a>线面投影、平面束</h3><p>平面束(过L的所有平面)&#x3D;面1+λ面2 </p>
+<p>线面投影&#x3D;过L与面垂直的面相交形成的交线<br>平面束法向量 · 面法向量 &#x3D; 0 求得垂直面</p>
+<h2 id="空间曲面"><a href="#空间曲面" class="headerlink" title="空间曲面"></a>空间曲面</h2><h3 id="柱面"><a href="#柱面" class="headerlink" title="柱面"></a>柱面</h3><h3 id="旋转曲线"><a href="#旋转曲线" class="headerlink" title="旋转曲线"></a>旋转曲线</h3><p>|M0T|^2&#x3D;|M1T|^2&#x3D;x^2&#x3D;x0^2+z0^2，此为绕y转动</p>
+<h2 id="空间曲线"><a href="#空间曲线" class="headerlink" title="空间曲线"></a>空间曲线</h2><p>参数式</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
 </search>
