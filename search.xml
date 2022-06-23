@@ -2291,15 +2291,49 @@
     <url>/2022/06/12/%E6%9B%B2%E7%BA%BF%E5%92%8C%E6%9B%B2%E9%9D%A2%E7%A7%AF%E5%88%86/</url>
     <content><![CDATA[<h1 id="曲线和曲面积分"><a href="#曲线和曲面积分" class="headerlink" title="曲线和曲面积分"></a>曲线和曲面积分</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
 <h2 id="第一类曲线积分-对弧长"><a href="#第一类曲线积分-对弧长" class="headerlink" title="第一类曲线积分(对弧长)"></a>第一类曲线积分(对弧长)</h2><p>背景：求弧长质量<br>不具方向性，下限一定小于上限<br>$$<br>\int_Lf(x,y)dl&#x3D;\int_a^bf(x,y(x))\sqrt{1+y’^2}dx&#x3D;\int_α^βf(x(t),y(t))\sqrt{x’(t)^2+y’(t)^2)}dt<br>$$</p>
-<h2 id="第二类曲线积分-对坐标"><a href="#第二类曲线积分-对坐标" class="headerlink" title="第二类曲线积分(对坐标)"></a>第二类曲线积分(对坐标)</h2><p>背景：求做功<br>具有方向性<br>$$<br>\int_L\vec{f}(x,y)d\vec{l}&#x3D;\int_L(P(x,y(x))dx+Q(x,y(x))dy)&#x3D;\int_a^b(P(x,y(x))+Q(x,y(x))y’(x))dx&#x3D;\int_α^β(P(x(t),y(t))x’(t)+Q(x(t),y(t))y’(t))dt<br>$$</p>
+<h2 id="第二类曲线积分-对坐标"><a href="#第二类曲线积分-对坐标" class="headerlink" title="第二类曲线积分(对坐标)"></a>第二类曲线积分(对坐标)</h2><p>背景：求做功<br>具有方向性<br>$$<br>\int_L\vec{f}(x,y)d\vec{l}&#x3D;\int_a^b(P(x,y(x))+Q(x,y(x))y’(x))dx&#x3D;\int_α^β(P(x(t),y(t))x’(t)+Q(x(t),y(t))y’(t))dt<br>$$</p>
 <h2 id="两类曲线的联系"><a href="#两类曲线的联系" class="headerlink" title="两类曲线的联系"></a>两类曲线的联系</h2><p>根据线与其在坐标轴上的投影形成的方向角<br>$$<br>\int_L(P(x,y(x))dx+Q(x,y(x))dy)&#x3D;\int_L(Pcosα+Qcosβ)dl<br>$$</p>
-<h2 id="第一类曲面积分"><a href="#第一类曲面积分" class="headerlink" title="第一类曲面积分"></a>第一类曲面积分</h2><p>背景：求曲面质量<br>$$<br>\iint_Df(x,y,z)ds&#x3D;\iint_Df(x,y,z(x,y))\sqrt{1+z_x^2+z_y^2}dxdy<br>$$</p>
-<h2 id="第二类曲面积分"><a href="#第二类曲面积分" class="headerlink" title="第二类曲面积分"></a>第二类曲面积分</h2><p>背景：求流量<br>$$<br>\iint_\sum v(x,y,z)ds&#x3D;\iint_\sum (P(z,y,z(x,y))dydz+Q(z,y,z(x,y))dxdz+R(z,y,z(x,y))dxdy)<br>$$</p>
-<h2 id="两类曲面的联系"><a href="#两类曲面的联系" class="headerlink" title="两类曲面的联系"></a>两类曲面的联系</h2><p>根据面与其在坐标平面上的投影形成的方向角<br>$$<br>\iint_\sum (P(z,y,z(x,y))dydz+Q(z,y,z(x,y))dxdz+R(z,y,z(x,y))dxdy)&#x3D;\iint_\sum (P(z,y,z(x,y))cosα+Q(z,y,z(x,y))cosβ+R(z,y,z(x,y))cosσ)ds<br>$$<br>cos用偏导数代换可归一得<br>$$<br>原式&#x3D;\iint_\sum (-z_xP(z,y,z(x,y))-z_yQ(z,y,z(x,y))cosβ+R(z,y,z(x,y)))dxdy<br>$$</p>
+<h2 id="第一类曲面积分-对面积"><a href="#第一类曲面积分-对面积" class="headerlink" title="第一类曲面积分(对面积)"></a>第一类曲面积分(对面积)</h2><p>背景：求曲面质量<br>$$<br>\iint_Df(x,y,z)ds&#x3D;\iint_Df(x,y,z(x,y))\sqrt{1+z_x^2+z_y^2}dxdy<br>$$</p>
+<h2 id="第二类曲面积分"><a href="#第二类曲面积分" class="headerlink" title="第二类曲面积分"></a>第二类曲面积分</h2><p>背景：求流量<br>$$<br>\iint_\sum v(x,y,z)ds&#x3D;\iint_{D_{xy}} (P(x,y,z(x,y))dydz+Q(x,y,z(x,y))dxdz+R(x,y,z(x,y))dxdy)<br>$$</p>
+<h2 id="两类曲面的联系"><a href="#两类曲面的联系" class="headerlink" title="两类曲面的联系"></a>两类曲面的联系</h2><p>任一曲面均为z&#x3D;z’x<em>x+z’y</em>y+c，所以有正向法向量为(-z’x,-z’y,1)，所以可以求得法向量得方向余弦<br>曲面乘以法向量方向余弦x得曲面在对应坐标面yoz上的投影<br>$$<br>\iint_{D_{xy}} (P(x,y,z(x,y))dydz+Q(x,y,z(x,y))dxdz+R(x,y,z(x,y))dxdy)<br>&#x3D;\iint_\sum (P(x,y,z(x,y))cosα+Q(x,y,z(x,y))cosβ+R(x,y,z(x,y))cosσ)ds\<br>&#x3D;\iint_{D_{xy}} (-z_xP(z,y,z(x,y))-z_yQ(z,y,z(x,y))+R(z,y,z(x,y)))&#x2F;\sqrt{1+z_x^2+z_y^2}*ds\<br>$$</p>
 <h2 id="格林公式"><a href="#格林公式" class="headerlink" title="格林公式"></a>格林公式</h2><p>用于：解决第二类曲线积分<br>要求：封闭，正向(D在l左侧)，P,Q可连续偏导<br>原理：D内部分成多个无限小的D1，分别求出再求和<br>$$<br>\oint_L(P(x,y(x))dx+Q(x,y(x))dy)&#x3D;\iint_D(∂Q&#x2F;∂x-∂P&#x2F;∂y)dxdy<br>$$</p>
 <p>挖洞问题(对于D内有奇点)：l为被挖掉的区域边界<br>补线问题(对于不封闭l)：l为补上的线段<br>$$<br>I&#x3D;\oint_{L+l}\vec{f}(x,y)d\vec{l}-\oint_l\vec{f}(x,y)d\vec{l}<br>$$<br>特性：<br>对于封闭D，第二类曲线积分为0<br>即做功与过程无关，与起点和终点有关<br>f相当于D内某一点的全微分<br>D内任意一点都存在∂Q&#x2F;∂x&#x3D;∂P&#x2F;∂y</p>
-<h2 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h2><p>用于：解决第二类曲面积分<br>要求：封闭，从内向外，P,Q,R可连续偏导<br>$$<br>\iint_\sum (P(z,y,z(x,y))dydz+Q(z,y,z(x,y))dxdz+R(z,y,z(x,y))dxdy)&#x3D;\iiint_Ω(∂P&#x2F;∂x+∂Q&#x2F;∂y+∂P&#x2F;∂z)dxdydz<br>$$</p>
+<h2 id="高斯公式"><a href="#高斯公式" class="headerlink" title="高斯公式"></a>高斯公式</h2><p>用于：解决第二类曲面积分<br>要求：封闭，从内向外，P,Q,R可连续偏导<br>$$<br>\iint_\sum (P(x,y,z(x,y))dydz+Q(x,y,z(x,y))dxdz+R(x ,y,z(x,y))dxdy)&#x3D;\iiint_Ω(∂P&#x2F;∂x+∂Q&#x2F;∂y+∂P&#x2F;∂z)dxdydz<br>$$</p>
 ]]></content>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>级数</title>
+    <url>/2022/03/14/%E7%BA%A7%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<h2 id="通用性质"><a href="#通用性质" class="headerlink" title="通用性质"></a>通用性质</h2><p>级数<strong>绝对收敛</strong>，则原级数一定收敛</p>
+<p>级数的绝对值发散时，由比值或根植法证得的，原级数才发散</p>
+<p>改变有限项不改变级数敛散性</p>
+<h2 id="常数项级数"><a href="#常数项级数" class="headerlink" title="常数项级数"></a>常数项级数</h2><p>$$<br>一般形式\sum_{n&#x3D;1}^{\infty}u_n\<br>等比(几何)级数\sum_{n&#x3D;1}^{\infty}aq^n\<br>p级数\sum_{n&#x3D;1}^{\infty}1&#x2F;n^p\<br>调和级数\sum_{n&#x3D;1}^{\infty}1&#x2F;n\<br>交错级数\sum_{n&#x3D;1}^{\infty}(-1)^{n+c}Un<br>$$</p>
+<p>Sn趋向于S(级数收敛)<br>    &#x3D;&gt;Un趋向于0<br>    &#x3D;&gt;加括号仍然收敛  </p>
+<p>|q|&lt;1,<strong>等比级数</strong>收敛于a&#x2F;(1-q)</p>
+<p>p&gt;1,<strong>p级数收敛</strong></p>
+<p>p&#x3D;1的p级数即为<strong>调和级数</strong></p>
+<p>任意n满足U_(n+1)≤U_n且n趋向无穷时Un等于0则<strong>交错级数</strong>收敛且S≤U1</p>
+<h2 id="正项级数审敛"><a href="#正项级数审敛" class="headerlink" title="正项级数审敛"></a>正项级数审敛</h2><p>级数收敛 &lt;&#x3D;&gt; Sn有界</p>
+<p>比较法1：Vn≤Un，若Un收敛则Vn收敛，若Vn发散则Un发散<br>比较法2：Vn&#x2F;Un&#x3D;L，若[0,+∞)中Un收敛则Vn收敛，若(0,+∞)或+∞中Un发散则Vn发散<br>极限法：nUn∈(0,+∞)或+∞则发散，n^pUn∈[0,+∞)则收敛</p>
+<p>比值法：U_(n+1)&#x2F;U_n   &lt;1则收敛   &gt;1则发散<br>根值法：Un^(1&#x2F;n)   &lt;1则收敛   &gt;1则发散</p>
+<h2 id="函数项级数"><a href="#函数项级数" class="headerlink" title="函数项级数"></a>函数项级数</h2><p>$$<br>一般形式\sum_{n&#x3D;1}^{\infty}u_n(x)\<br>幂级数\sum_{n&#x3D;0}^{\infty}a_nx^n\<br>三角级数a_0&#x2F;2\sum_{n&#x3D;0}^{\infty}（a_ncosn\pi x&#x2F;l+b_nsinn\pi x&#x2F;l）<br>$$</p>
+<p>对于<strong>幂级数</strong>，x0该点收敛时，|x|&lt;|x0|收敛，x0该点发散时，|x0|&lt;|x|发散，0点到收敛的边界点的长度称收敛半径R</p>
+<p>根据比值法|a_(n+1) &#x2F; a_n|&#x3D;ρ&#x3D;1&#x2F;R<br>对于缺项或者(x-x0)可使用还原法或者根据比值法原理求取|x|的范围即R</p>
+<p>求Sn时，可以先求导或对0到x积分再求和然后再对0到x积分或求导</p>
+<p>对于l&#x3D;pi即周期为2pi的<strong>三角级数</strong>，根据性质可知<br>$$<br>a0&#x3D;1&#x2F;\pi\int_{-\pi}^\pi f(x)dx \<br>an&#x3D;1&#x2F;\pi\int_{-\pi}^\pi f(x)cosnxdx \<br>bn&#x3D;1&#x2F;\pi\int_{-\pi}^\pi f(x)sinnxdx \<br>以上三条称傅里叶系数，带入三角级数后也称傅里叶级数<br>$$<br>对于l&#x3D;pi即周期为2pi的<strong>三角级数</strong>，在一个周期中第一类间断点和极值点只有有限个，则收敛于(f(+)+f(-))&#x2F;2<br>对于任意周期为的<strong>三角级数</strong>，设t&#x3D;pix&#x2F;l，有F(t)&#x3D;f(l&#x2F;pi * t)&#x3D;f(x)&#x3D;f(x+2pi)&#x3D;f(l&#x2F;p * (t+2pi))&#x3D;F(t+2pi)<br>通过周期为2pi的形式求得F(t)，再回代x即可</p>
+<p>当求固定范围i的<strong>三角级数</strong>时，周期或者奇偶延拓后求出傅里叶系数，再限制有效范围即可</p>
+<h2 id="三角函数系性质"><a href="#三角函数系性质" class="headerlink" title="三角函数系性质"></a>三角函数系性质</h2><p>cosnx,sinnx,cosnxcoskx,sinnxsinkx,sinnxcosnx在（-pi,pi）的积分为0</p>
+<p>cos^2(nx),sin^2(nx)在（-pi,pi）的积分不为0</p>
+<h2 id="求幂级数展开式"><a href="#求幂级数展开式" class="headerlink" title="求幂级数展开式"></a>求幂级数展开式</h2><p>求f的n次幂<br>写出级数fn(x)x^n&#x2F;n!<br>证明n趋向于无穷时|Rn|&#x3D;|fε(x)x^n&#x2F;n!|趋向于0即可</p>
+<p>间接法(代换x)，注意范围<br>$$<br>e^x&#x3D;\sum_{n&#x3D;0}x^n&#x2F;n!\space\space\space (-\infty,\infty)\<br>In(x+1)&#x3D;\sum_{n&#x3D;0}(-1)^nx^{n+1}&#x2F;(n+1)\space\space\space (-1,1)\<br>sinx&#x3D;\sum_{n&#x3D;0}(-1)^nx^{2n+1}&#x2F;(2n+1)!\space\space\space (-\infty,\infty)\<br>cosx&#x3D;\sum_{n&#x3D;0}(-1)^nx^{2n}&#x2F;(2n)!\space\space\space (-\infty,\infty)\<br>1&#x2F;(1+x)&#x3D;\sum_{n&#x3D;0}(-1)^nx^n\space\space\space (-1,1)\<br>1&#x2F;(1-x)&#x3D;\sum_{n&#x3D;0}x^n\space\space\space (-1,1)\<br>$$</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
       <tags>
         <tag>math</tag>
       </tags>
