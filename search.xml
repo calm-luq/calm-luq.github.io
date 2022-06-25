@@ -238,7 +238,7 @@
 <p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>对于三角则凑出类似下方格式来凑微分 即 [A(导数)+B(原函数)]&#x2F;原函数<br>$$<br>[a(sinx-cosx)+b(sinx+cos)]&#x2F;(sinx+cosx)<br>$$</p>
 <p>分母配方(平方和)</p>
 <h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)&#x2F;(cx+d)) 用 sin^2 + cos^2 &#x3D; 1<br>√(ax+b)或√(e^x+b)直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
-<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换<br>奇次凑微分<br>偶次降次<br>分母去和差<br>万能公式：sinx&#x3D;2u&#x2F;u^2+1 cosx&#x3D;(1-u^2)&#x2F;(1+u^2)</p>
+<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换<br>奇次凑微分<br>偶次降次<br>分母去和差<br>万能公式：u&#x3D;tan(x&#x2F;2) sinx&#x3D;2u&#x2F;u^2+1 cosx&#x3D;(1-u^2)&#x2F;(1+u^2)</p>
 <h2 id="积分表"><a href="#积分表" class="headerlink" title="积分表"></a>积分表</h2><p>大部分积分表同导数表<br>重要积分&#x2F;导数：</p>
 <table>
 <thead>
@@ -505,12 +505,14 @@
 <h3 id="非齐次"><a href="#非齐次" class="headerlink" title="非齐次"></a>非齐次</h3><h4 id="分式有常数不可以同除"><a href="#分式有常数不可以同除" class="headerlink" title="分式有常数不可以同除"></a>分式有常数不可以同除</h4><p>发现x和y在分子和分母系数成比例，则改为设u&#x3D;ax+by，此时y’&#x3D;(du&#x2F;dx - a)&#x2F;b&#x3D;(u+c)&#x2F;(ku+d)直接解得<br>否则构造X&#x3D;x+c，Y&#x3D;y+d变为求齐次分式</p>
 <h4 id="标准结构y’-Qy-x3D-P"><a href="#标准结构y’-Qy-x3D-P" class="headerlink" title="标准结构y’+Qy&#x3D;P"></a>标准结构y’+Qy&#x3D;P</h4><p>常数变异法，换为x的函数u，带回求得u<br>y&#x3D;ce^(-∫Pdx)+e^(-∫Pdx)*∫Qe^(∫Pdx)dx<br>解的性质：有y1,y2为特解，y1-y2则为齐次通解，(y1+y2)&#x2F;2为通解</p>
 <h4 id="伯努利"><a href="#伯努利" class="headerlink" title="伯努利"></a>伯努利</h4><p>y’+py&#x3D;qy^n &#x3D;&gt; y‘y^(-n)+py^(1-n)&#x3D;q &#x3D;&gt; z’+pz&#x3D;q 其中z&#x3D;y^(1-n)</p>
-<h2 id="二阶线性微分方程"><a href="#二阶线性微分方程" class="headerlink" title="二阶线性微分方程"></a>二阶线性微分方程</h2><h3 id="y’’-x3D-f-x"><a href="#y’’-x3D-f-x" class="headerlink" title="y’’&#x3D;f(x)"></a>y’’&#x3D;f(x)</h3><p>积分降阶</p>
-<h3 id="y’’-x3D-f-x-y’"><a href="#y’’-x3D-f-x-y’" class="headerlink" title="y’’&#x3D;f(x,y’)"></a>y’’&#x3D;f(x,y’)</h3><p>设p&#x3D;y’，y’’&#x3D;p’&#x3D;f(x,p’)，变为一阶</p>
-<h3 id="y’’-x3D-f-y-y’"><a href="#y’’-x3D-f-y-y’" class="headerlink" title="y’’&#x3D;f(y,y’)"></a>y’’&#x3D;f(y,y’)</h3><p>设p&#x3D;y’，y’’&#x3D;p*dp&#x2F;dy&#x3D;f(y,p’)，变为一阶</p>
+<h2 id="二阶微分方程"><a href="#二阶微分方程" class="headerlink" title="二阶微分方程"></a>二阶微分方程</h2><h3 id="可降阶"><a href="#可降阶" class="headerlink" title="可降阶"></a>可降阶</h3><h4 id="y’’-x3D-f-x"><a href="#y’’-x3D-f-x" class="headerlink" title="y’’&#x3D;f(x)"></a>y’’&#x3D;f(x)</h4><p>积分降阶</p>
+<h4 id="y’’-x3D-f-x-y’"><a href="#y’’-x3D-f-x-y’" class="headerlink" title="y’’&#x3D;f(x,y’)"></a>y’’&#x3D;f(x,y’)</h4><p>设p&#x3D;y’，y’’&#x3D;p’&#x3D;f(x,p’)，变为一阶</p>
+<h4 id="y’’-x3D-f-y-y’"><a href="#y’’-x3D-f-y-y’" class="headerlink" title="y’’&#x3D;f(y,y’)"></a>y’’&#x3D;f(y,y’)</h4><p>设p&#x3D;y’，y’’&#x3D;p*dp&#x2F;dy&#x3D;f(y,p’)，变为一阶</p>
 <h3 id="标准结构y’’-py‘-qy-x3D-F"><a href="#标准结构y’’-py‘-qy-x3D-F" class="headerlink" title="标准结构y’’+py‘+qy&#x3D;F"></a>标准结构y’’+py‘+qy&#x3D;F</h3><h4 id="齐次且p-q为常数"><a href="#齐次且p-q为常数" class="headerlink" title="齐次且p,q为常数"></a>齐次且p,q为常数</h4><p>设y&#x3D;e^(rx)，得r^2+pr+q&#x3D;0<br>求得r1≠r2，y&#x3D;C1e^(r1x)+C2e^(r2x)<br>求得r1&#x3D;r2，y&#x3D;C1e^(r1x)+C2xe^(r2x)<br>求得r&#x3D;a±bi，y&#x3D;e^(ax)(C1sinbx+C2cosbx)</p>
-<h4 id="非齐次且p-q为常数且F-x3D-Re-kx"><a href="#非齐次且p-q为常数且F-x3D-Re-kx" class="headerlink" title="非齐次且p,q为常数且F&#x3D;Re^kx"></a>非齐次且p,q为常数且F&#x3D;Re^kx</h4><p>R 为 多项式 或 多项式sinbx+多项式cosbx</p>
-<p>求出齐次方程r后，令 y特解&#x3D;F&#x3D;Re^kx<br>此时R的常系数变异，换为变系数量，若k&#x3D;r1则R需乘上x，若k&#x3D;r1&#x3D;r2则R需乘上x^2<br>将y&#x3D;F带入原式求得变量即求得y特解，特解加上通解则为通解</p>
+<h4 id="非齐次且p-q为常数且F-x3D-Re-kx"><a href="#非齐次且p-q为常数且F-x3D-Re-kx" class="headerlink" title="非齐次且p,q为常数且F&#x3D;Re^(kx)"></a>非齐次且p,q为常数且F&#x3D;Re^(kx)</h4><p>R 为 多项式 或 多项式sinbx+多项式cosbx</p>
+<p>求出齐次方程r</p>
+<p>令 y特解&#x3D;F&#x3D;Re^kx ，此时R的常系数变异，换为变系数，若k&#x3D;r1则R需乘上x，若k&#x3D;r1&#x3D;r2则R需乘上x^2<br>即y*&#x3D;x^n Re^(kx)</p>
+<p>将F&#x3D;y*带入原式求得变量即求得y特解，特解加上通解则为通解</p>
 <h2 id="叠加原理"><a href="#叠加原理" class="headerlink" title="叠加原理"></a>叠加原理</h2><p>对于非齐次F&#x3D;f1+f2<br>可以使原式分别等于f1,f2求出特解y1,y2<br>y1+y2则为原式的特解</p>
 <h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>再求原函数y&#x3D;f(x)时求的是特解，要找f(x)隐藏的初始条件</p>
 ]]></content>
@@ -527,7 +529,7 @@
     <content><![CDATA[<h1 id="向量代数与空间解析几何"><a href="#向量代数与空间解析几何" class="headerlink" title="向量代数与空间解析几何"></a>向量代数与空间解析几何</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
 <h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><h3 id="方向角"><a href="#方向角" class="headerlink" title="方向角"></a>方向角</h3><p>cosA&#x3D;x&#x2F;|<strong>r</strong>|   cosB&#x3D;y&#x2F;|<strong>r</strong>|   cosC&#x3D;z&#x2F;|<strong>r</strong>|<br>cos^2(A)+cos^2(B)+cos^2(C)&#x3D;1<br>{cosA，cosB，cosC}&#x3D;<strong>r</strong>&#x2F;|<strong>r</strong>|</p>
 <h3 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h3><p>$$<br>a·b &#x3D; |a||b|cos&lt;a,b&gt; &#x3D; a_xb_x+a_yb_y+a_zb_z &#x3D; a*(b在a上的投影)<br>$$</p>
-<h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><p>$$<br>a × b &#x3D; |a||b|sin&lt;a,b&gt;&#x3D;\left|<br>\begin{array}{cccc}<br>i&amp;j&amp;k \<br>a_x&amp;a_y&amp;a_z\<br>b_x&amp;b_y&amp;b_z<br>\end{array}<br>\right|&#x3D;<br>a和b形成的平行四边形面积<br>$$</p>
+<h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><p>$$<br>|a × b| &#x3D; |a||b|sin&lt;a,b&gt;&#x3D;\left|<br>\begin{array}{cccc}<br>i&amp;j&amp;k \<br>a_x&amp;a_y&amp;a_z\<br>b_x&amp;b_y&amp;b_z<br>\end{array}<br>\right|&#x3D;<br>a和b形成的平行四边形面积<br>$$</p>
 <p> 方向为右手食指由a绕向b时拇指方向 </p>
 <h3 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h3><p>$$<br>[abc]&#x3D;a×b·c&#x3D;\left|\begin{array}{cccc}<br>c_x&amp;c_y&amp;c_z\<br>a_x&amp;a_y&amp;a_z\<br>b_x&amp;b_y&amp;b_z<br>\end{array}<br>\right|&#x3D;<br>a,b和c形成的平行六面体体积<br>$$</p>
 <h2 id="空间平面方程"><a href="#空间平面方程" class="headerlink" title="空间平面方程"></a>空间平面方程</h2><p>点法式：A(x-x0)+B(y-y0)+C(z-z0)&#x3D;0，其中(x0,y0,z0)为面上一点，(A,B,C)为法线<br>利用叉乘可以求法线</p>
@@ -547,8 +549,6 @@
 <p>线到线：s1×s2·M1M2≠0异面，其中s1,s2分别为两条直线方向向量，M1M2为两直线上点形成的任一向量<br>做平行线使两直线在同一平面，取原直线一点，求点到面距离即可</p>
 <h3 id="线面投影、平面束"><a href="#线面投影、平面束" class="headerlink" title="线面投影、平面束"></a>线面投影、平面束</h3><p>平面束(过L的所有平面)&#x3D;面1+λ面2 </p>
 <p>线面投影&#x3D;过L与面垂直的面相交形成的交线<br>平面束法向量 · 面法向量 &#x3D; 0 求得垂直面</p>
-<h2 id="空间曲面"><a href="#空间曲面" class="headerlink" title="空间曲面"></a>空间曲面</h2><h3 id="柱面"><a href="#柱面" class="headerlink" title="柱面"></a>柱面</h3><h3 id="旋转曲线"><a href="#旋转曲线" class="headerlink" title="旋转曲线"></a>旋转曲线</h3><p>|M0T|^2&#x3D;|M1T|^2&#x3D;x^2&#x3D;x0^2+z0^2，此为绕y转动</p>
-<h2 id="空间曲线"><a href="#空间曲线" class="headerlink" title="空间曲线"></a>空间曲线</h2><p>参数式</p>
 ]]></content>
       <categories>
         <category>math</category>
@@ -565,25 +565,25 @@
 <p>极限定义<br>limx→0,y→0f(x,y)<br>注意：<br>各个方向都存在且相等时才存在极限   用于证明不存在<br>要同时取极限   求极限存在<br>使用夹逼定理   证明极限存在并求取</p>
 <p>极限等于函数值时，该点连续</p>
 <h2 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h2><p>将多元函数的其他元当作常数，对相关元求导</p>
-<p>记作fx(x0,y0)&#x3D;∂f&#x2F;∂x|(x0,y0)&#x3D;limx→x0 (f(x,y0)-f(x0,y0))&#x2F;(x-x0)</p>
+<p>记作fx(x0,y0)&#x3D;∂f&#x2F;∂x|(x0,y0)&#x3D;limx→x0 (f(x,y0)-f(x0,y0))&#x2F;(x-x0)<br>分段函数分界点用定义求</p>
 <p>高阶同理，对fx(x0,y0)再次求偏导，记作fxx(x0,y0)&#x3D;∂^2f&#x2F;∂x^2|(x0,y0)</p>
 <p>连续不一定可偏导(同一元的原理)，可偏导不一定连续(此时只有两个方向连续)</p>
-<h2 id="全微分"><a href="#全微分" class="headerlink" title="全微分"></a>全微分</h2><p>定义<br>dz&#x3D;Adx+Bdy+o(ρ)&#x3D;f(x,y)-f(x0,y0)<br>其中ρ&#x3D;√((dx)^2+(dy)^2)为变化半径，A为fx，B为fy</p>
+<h2 id="全微分"><a href="#全微分" class="headerlink" title="全微分"></a>全微分</h2><p>定义<br>dz&#x3D;Adx+Bdy+o(ρ)&#x3D;f(x,y)-f(x0,y0) 即连续且可偏导则可微<br>其中ρ&#x3D;√((dx)^2+(dy)^2)为变化半径，A为fx，B为fy</p>
 <p>(dz-Adx-Bdy)&#x2F;ρ&#x3D;o(ρ)&#x2F;ρ&#x3D;0  通过定义(即该式可以证明可微)<br>该式成立可以获取A和B</p>
 <p>可微一定连续(极限等于函数值)<br>可微一定可偏导(A,B存在)<br>可微存在切平面</p>
-<h2 id="全导数"><a href="#全导数" class="headerlink" title="全导数"></a>全导数</h2><p>关键在于从全微分入手<br>dz&#x2F;dt&#x3D;f’1* u’ +f’2 * v’</p>
+<h2 id="多元复合函数求-偏-导"><a href="#多元复合函数求-偏-导" class="headerlink" title="多元复合函数求(偏)导"></a>多元复合函数求(偏)导</h2><p>关键在于从全微分入手<br>dz&#x2F;dt&#x3D;f’1* u’ +f’2 * v’</p>
 <p>二阶<br>d^2 z&#x2F;dt^2&#x3D;f’1* u’’ +f’2 * v’’  +u’(f’11* u’ +f’’12 * v’) +v’(f’’12* u’ +f’’22 * v’)</p>
 <h6 id="对于u-v与t-q有关"><a href="#对于u-v与t-q有关" class="headerlink" title="对于u,v与t,q有关"></a>对于u,v与t,q有关</h6><p>关键在于需求导函数的变量与给定的元是否存在关系<br>只有1个存在关系即求偏导，多个存在关系则是全导</p>
 <h6 id="对于逆运算"><a href="#对于逆运算" class="headerlink" title="对于逆运算"></a>对于逆运算</h6><p>原函数要加上无关元的函数，如y的偏导的原函数要加上g(x)</p>
 <h6 id="对于换元"><a href="#对于换元" class="headerlink" title="对于换元"></a>对于换元</h6><p>直接替换普通变量</p>
 <p>再将给定条件求偏导再去替换</p>
-<h2 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h2><p>F&#x3D;0，等式两边同时求导</p>
-<p>一条方程求导：使用公式<br>dy&#x2F;dx&#x3D;-Fx&#x2F;Fy<br>注意上式为等式左右求x偏导，y与x有关，相当于乘法求导法则，求出y的偏导再链式法则</p>
-<p>方程组求导：对du和dv解方程，得全微分，从而得偏导数</p>
+<h2 id="隐函数求导"><a href="#隐函数求导" class="headerlink" title="隐函数求导"></a>隐函数求导</h2><h3 id="公式法"><a href="#公式法" class="headerlink" title="公式法"></a>公式法</h3><p>F&#x3D;0<br>dy&#x2F;dx&#x3D;-Fx&#x2F;Fy<br>注意Fy≠0</p>
+<h3 id="直接法"><a href="#直接法" class="headerlink" title="直接法"></a>直接法</h3><p>等式两边同时求导</p>
+<h3 id="全微分形式不变性"><a href="#全微分形式不变性" class="headerlink" title="全微分形式不变性"></a>全微分形式不变性</h3><p>dz&#x3D;((∂z∂u)&#x2F;(∂u∂x)+(∂z∂v)&#x2F;(∂v∂x))dx+((∂z∂u)&#x2F;(∂u∂y)+(∂z∂v)&#x2F;(∂v∂y))dy&#x3D;(∂zdu)&#x2F;∂u+(∂zdv)&#x2F;∂v</p>
 <h2 id="方向导数、梯度"><a href="#方向导数、梯度" class="headerlink" title="方向导数、梯度"></a>方向导数、梯度</h2><p>对于任意变化方向的偏导数<br>记为∂f&#x2F;∂l|(x0,y0)&#x3D;limt→0 (f(x0,y0)-f(x0+tcosa,y0+tcosb))&#x2F;t&#x3D;fxcsoa+fycosb )&#x3D; (fx,fy,yz) · (cosa,cosb,cosc)&#x3D; |▽f(x,y,z)|cosθ</p>
-<p>其中<br>a为l与x轴夹角，b为l与y轴夹角<br>切线向量(cosa,cosb,cosc)<br>其中θ为切线向量方向和梯度方向的夹角</p>
+<p>其中<br>a为l与x轴夹角，b为l与y轴夹角<br>方向向量(cosa,cosb,cosc)<br>其中θ为切线向量方向和梯度方向的夹角</p>
 <p>(fx,fy,yz)称为梯度<br>可记为gradf(x,y,z)&#x3D;▽f(x,y,z)<br>▽&#x3D;∂&#x2F;∂x +∂&#x2F;∂y +∂&#x2F;∂z</p>
-<p>梯度在几何意义上相当于等高线</p>
+<p>梯度在几何意义上相当于等高线<br>方向导数最大值&#x3D;梯度</p>
 <h2 id="极值、最值"><a href="#极值、最值" class="headerlink" title="极值、最值"></a>极值、最值</h2><h6 id="无条件极值流程"><a href="#无条件极值流程" class="headerlink" title="无条件极值流程"></a>无条件极值流程</h6><p>fx&#x3D;0,fy&#x3D;0<br>求出点驻点<br>fxx&#x3D;A,fyy&#x3D;C,fxy&#x3D;fyx&#x3D;B<br>求出拐点<br>B^2-AC&lt;0极值存在<br>A&gt;0极小值，A&lt;0极大值</p>
 <p>存在时，将点带回原函数求取即可</p>
 <h6 id="有条件极值流程"><a href="#有条件极值流程" class="headerlink" title="有条件极值流程"></a>有条件极值流程</h6><p>拉格朗日数乘法(原理自证)<br>令L&#x3D;f(x,y)+λ*D(x,y)<br>求Lx&#x3D;0,Ly&#x3D;0,D(x,y)&#x3D;0</p>
@@ -2306,7 +2306,7 @@
   </entry>
   <entry>
     <title>级数</title>
-    <url>/2022/03/14/%E7%BA%A7%E6%95%B0/</url>
+    <url>/2022/06/24/%E7%BA%A7%E6%95%B0/</url>
     <content><![CDATA[<h1 id="级数"><a href="#级数" class="headerlink" title="级数"></a>级数</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
 <h2 id="通用性质"><a href="#通用性质" class="headerlink" title="通用性质"></a>通用性质</h2><p>级数<strong>绝对收敛</strong>，则原级数一定收敛</p>
 <p>级数的绝对值发散时，由比值或根植法证得的，原级数才发散</p>
@@ -2320,7 +2320,7 @@
 <h2 id="正项级数审敛"><a href="#正项级数审敛" class="headerlink" title="正项级数审敛"></a>正项级数审敛</h2><p>级数收敛 &lt;&#x3D;&gt; Sn有界</p>
 <p>比较法1：Vn≤Un，若Un收敛则Vn收敛，若Vn发散则Un发散<br>比较法2：Vn&#x2F;Un&#x3D;L，若[0,+∞)中Un收敛则Vn收敛，若(0,+∞)或+∞中Un发散则Vn发散<br>极限法：nUn∈(0,+∞)或+∞则发散，n^pUn∈[0,+∞)则收敛</p>
 <p>比值法：U_(n+1)&#x2F;U_n   &lt;1则收敛   &gt;1则发散<br>根值法：Un^(1&#x2F;n)   &lt;1则收敛   &gt;1则发散</p>
-<h2 id="函数项级数"><a href="#函数项级数" class="headerlink" title="函数项级数"></a>函数项级数</h2><p>$$<br>一般形式\sum_{n&#x3D;1}^{\infty}u_n(x)\<br>幂级数\sum_{n&#x3D;0}^{\infty}a_nx^n\<br>三角级数a_0&#x2F;2\sum_{n&#x3D;0}^{\infty}（a_ncosn\pi x&#x2F;l+b_nsinn\pi x&#x2F;l）<br>$$</p>
+<h2 id="函数项级数"><a href="#函数项级数" class="headerlink" title="函数项级数"></a>函数项级数</h2><p>$$<br>一般形式\sum_{n&#x3D;1}^{\infty}u_n(x)\<br>幂级数\sum_{n&#x3D;0}^{\infty}a_nx^n\<br>三角级数a_0&#x2F;2+\sum_{n&#x3D;0}^{\infty}（a_ncosn\pi x&#x2F;l+b_nsinn\pi x&#x2F;l）<br>$$</p>
 <p>对于<strong>幂级数</strong>，x0该点收敛时，|x|&lt;|x0|收敛，x0该点发散时，|x0|&lt;|x|发散，0点到收敛的边界点的长度称收敛半径R</p>
 <p>根据比值法|a_(n+1) &#x2F; a_n|&#x3D;ρ&#x3D;1&#x2F;R<br>对于缺项或者(x-x0)可使用还原法或者根据比值法原理求取|x|的范围即R</p>
 <p>求Sn时，可以先求导或对0到x积分再求和然后再对0到x积分或求导</p>
