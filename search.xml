@@ -1461,39 +1461,6 @@
       </tags>
   </entry>
   <entry>
-    <title>C陷阱与缺陷</title>
-    <url>/2022/06/11/C%E9%99%B7%E9%98%B1%E4%B8%8E%E7%BC%BA%E9%99%B7/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>git</title>
-    <url>/2022/03/28/git/</url>
-    <content><![CDATA[<h1 id="快速上手Git"><a href="#快速上手Git" class="headerlink" title="快速上手Git"></a>快速上手Git</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>windows版的下载地址<a href="https://git-scm.com/">Git (git-scm.com)</a></p>
-<p>linux版<br>Fedora用前者，Ubuntu用后者</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum install git-core</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>右键桌面，选择git bash here</p>
-<h4 id="用户信息"><a href="#用户信息" class="headerlink" title="用户信息"></a>用户信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;这里写你的名字&quot;</span></span><br><span class="line">$ git config --global user.email 这里写你的邮箱</span><br></pre></td></tr></table></figure>
-<h2 id="使用Git"><a href="#使用Git" class="headerlink" title="使用Git"></a>使用Git</h2><p>在需要备份的文件夹下，右键，选择git bash here</p>
-<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-<h3 id="拷贝项目"><a href="#拷贝项目" class="headerlink" title="拷贝项目"></a>拷贝项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> 这里写你要克隆的仓库</span><br></pre></td></tr></table></figure>
-<h3 id="项目保存到当地"><a href="#项目保存到当地" class="headerlink" title="项目保存到当地"></a>项目保存到当地</h3><p>在已经有git项目的文件夹下会有.git的隐藏文件，里面存储着本地的项目快照</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add 项目</span><br><span class="line">$ git commit -m <span class="string">&quot;备注信息&quot;</span></span><br></pre></td></tr></table></figure>
-<p>add相当于给文件夹拍照，commit相当于将照片保存</p>
-<h3 id="项目上传云端和从云端更新"><a href="#项目上传云端和从云端更新" class="headerlink" title="项目上传云端和从云端更新"></a>项目上传云端和从云端更新</h3><p>设置原创仓库</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add 这里自定义仓库名 网址</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push 这里写要上传到的仓库 这里写需要上传的分支</span><br><span class="line">$ git fetch 这里写需要下载的仓库</span><br></pre></td></tr></table></figure>
-<h1 id="进阶使用"><a href="#进阶使用" class="headerlink" title="进阶使用"></a>进阶使用</h1><p>……待跟新</p>
-<h1 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h1><p><a href="http://git.oschina.net/progit/">Pro Git（中文版） (oschina.net)</a></p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>c语言补充</title>
     <url>/2022/04/14/c%E8%AF%AD%E8%A8%80%E8%A1%A5%E5%85%85/</url>
     <content><![CDATA[<h1 id="c语言补充"><a href="#c语言补充" class="headerlink" title="c语言补充"></a>c语言补充</h1><h2 id="库：string-h"><a href="#库：string-h" class="headerlink" title="库：string.h"></a>库：string.h</h2><p>函数：char <em> strtok(char </em> str,const char * delim)<br>功能：从str[0]开始往后查找delim，找到后返回delim前的子串，否则返回NULL</p>
@@ -1509,101 +1476,9 @@
       </tags>
   </entry>
   <entry>
-    <title>win下 hexo架构+butterfly主题+live2d看板娘 博客搭建</title>
-    <url>/2022/03/09/win%E4%B8%8B-hexo%E6%9E%B6%E6%9E%84-butterfly%E4%B8%BB%E9%A2%98-live2d%E7%9C%8B%E6%9D%BF%E5%A8%98-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要git<br>下载nodejs lts版本 nodejs.org/zh-cn/<br>安装时选择固定路径，勾选自动安装相关软件<br>cmd下： (或者git下用linux指令)<br>npm install -g cnpm —registry=<a href="http://registry.npm.taobao.org">http://registry.npm.taobao.org</a><br>cnpm install -g hexo-cli</p>
-<h2 id="依次输入指令"><a href="#依次输入指令" class="headerlink" title="依次输入指令"></a>依次输入指令</h2><p>chdir查看当前目录<br>md blog或者mkdir E:\blog（最好不要blog，改个名字)<br>e:<br>cd e:\blog<br>进入根目录<br>hexo init<br>npm install<br>hexo s<br>hexo n “a”创建文件<br>cd source_posts<br>修改文件<br>cd..退回上一文件夹<br>hexo g本地静态保存<br>hexo s本地localhost:4000启动(在s后加  -p 改端口)</p>
-<h2 id="静态网页实现"><a href="#静态网页实现" class="headerlink" title="静态网页实现"></a>静态网页实现</h2><p>在gitee(要ppage)或者github上创建公开仓库.io结尾<br>cnpm install —save hexo-deployer-git<br>编辑_config.yml:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: 	</span><br><span class="line">	gitrepo: https://github.com/你的用户名.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
-<p>hexo d 推送博客到远端</p>
-<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes/butterfly  下载主题<br>(没pug和stylus渲染器要下载)<br>编辑_config.yml:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">themes:butterfly</span><br></pre></td></tr></table></figure>
-<p>hexo clean清除缓存文件和已生成公开文件<br>hexo g</p>
-<h2 id="添加live2d看板娘"><a href="#添加live2d看板娘" class="headerlink" title="添加live2d看板娘"></a>添加live2d看板娘</h2><p>npm uninstall —save hexo-helper-live2d(如果下载了官方的要卸载)<br>cd进入themes/butterfly/source<br>git clone <a href="https://github.com/stevenjoezhang/live2d-widget.git(443报错就等等再试">https://github.com/stevenjoezhang/live2d-widget.git(443报错就等等再试</a>)<br>修改live2d-widget的autoload.js的live2d_path改为下方那个<br>进入butterfly下layout下includes的head.pug末尾粘贴</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">script(src=&#x27;live2d-widget/autoload.js&#x27;)</span><br></pre></td></tr></table></figure>
-<p>最后在根目录下的config加入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">	enable:true</span><br></pre></td></tr></table></figure>
-<p>修改ive2d-widget的参数：<br>    waifu.css修改位置<br>    waifu-tips.js修改文本</p>
-<h2 id="增加搜索"><a href="#增加搜索" class="headerlink" title="增加搜索"></a>增加搜索</h2><p>npm install hexo-generator-searchdb —save<br>vim source/_data/butterfly.yml<br>localsearch改true</p>
-<h2 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h2><p>hexo手册<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a><br>butterfly文档<a href="https://butterfly.js.org/posts/21cfbf15/">https://butterfly.js.org/posts/21cfbf15/</a><br>改网站搜索免费社交图标<a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free">https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free</a><br>改网站顶置图片<a href="https://pic.netbian.com/4kdongman/">https://pic.netbian.com/4kdongman/</a><br>live2d内容网站：<br>api:github.com/fghrsh/live2d_api<br>模型:github.com/summerscar/live2dDemo<br>参考:<a href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a><br> waifu-tips.js 的详细设置说明，和 waifu-tips.json 节点说明，见<a href="https://github.com/fghrsh/live2d_demo">https://github.com/fghrsh/live2d_demo</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>不定积分</title>
-    <url>/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
-    <content><![CDATA[<h1 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
-<p>f(x) + c = ∫f’(x)dx<br>运算法则类似导数运算</p>
-<h2 id="求不定积分"><a href="#求不定积分" class="headerlink" title="求不定积分"></a>求不定积分</h2><p>从上到下检索变换规律，每次变化前检查是否能凑微分</p>
-<h2 id="绝对值"><a href="#绝对值" class="headerlink" title="绝对值"></a>绝对值</h2><p>分情况讨论</p>
-<h3 id="特定形式"><a href="#特定形式" class="headerlink" title="特定形式"></a>特定形式</h3><h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><p>对于两个初等函数乘积的积分(v=反对幂指三)(先后)<br>∫vdu = uv - ∫udv<br>注意：指三需要循环求</p>
-<h4 id="猜测法"><a href="#猜测法" class="headerlink" title="猜测法"></a>猜测法</h4><p>∫g(x)/f(x)^2dx=F(x)+c<br>设F(x)=u(x)/f(x)<br>则g=u’f-uf’直接猜测法</p>
-<h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><p>假分数：<br>通过除法变为真分数</p>
-<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>对于三角则凑出类似下方格式来凑微分 即 [A(导数)+B(原函数)]/原函数</p>
-<script type="math/tex; mode=display">
-[a(sinx-cosx)+b(sinx+cos)]/(sinx+cosx)</script><p>分母配方(平方和)</p>
-<h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)/(cx+d)) 用 sin^2 + cos^2 = 1<br>√(ax+b)或√(e^x+b)直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
-<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换<br>奇次凑微分<br>偶次降次<br>分母去和差<br>万能公式：u=tan(x/2) sinx=2u/u^2+1 cosx=(1-u^2)/(1+u^2)</p>
-<h2 id="积分表"><a href="#积分表" class="headerlink" title="积分表"></a>积分表</h2><p>大部分积分表同导数表<br>重要积分/导数：</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>导数</th>
-<th>原函数</th>
-<th>导数</th>
-<th>原函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1/(1+cosx)</td>
-<td>tan(x/2)</td>
-<td>sin2x</td>
-<td>sin^2(x)</td>
-</tr>
-<tr>
-<td>tanx</td>
-<td>-In\</td>
-<td>cosx\</td>
-<td></td>
-<td>cotx</td>
-<td>In\</td>
-<td>sinx\</td>
-<td></td>
-</tr>
-<tr>
-<td>secx</td>
-<td>In\</td>
-<td>secx+tanx\</td>
-<td></td>
-<td>cscx</td>
-<td>In\</td>
-<td>csc-cotx\</td>
-<td></td>
-</tr>
-<tr>
-<td>sec^2(x)</td>
-<td>tanx</td>
-<td>secx * tanx</td>
-<td>sec(x)</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>cos2x = cos^2(x) - sin^2(x) = 1 -  2sin^2(x)<br>1 + tan^2 = sec^2<br>1 = cos^2 + sin^2<br>1-sinx=(sin2/x - cosx/2)^2<br>(1+sinx)/(1+cosx)=sec^2(x/2) /2 + tan(x/2)此条常用于e^x(f+f’)<br>tan(x/2)=sinx/(1+cosx)<br>1/(a+bcosx)=1/(m+kcos^2(x))此条常用于常数加三件作为分母<br>=sec^2(x)/(msec^2(x)+k)=dtanx/(mtanx+m+k)<br>积化和差，和差化积</p>
-]]></content>
-      <categories>
-        <category>math</category>
-      </categories>
-      <tags>
-        <tag>math</tag>
-      </tags>
+    <title>C陷阱与缺陷</title>
+    <url>/2022/06/11/C%E9%99%B7%E9%98%B1%E4%B8%8E%E7%BC%BA%E9%99%B7/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>nas的简介、制作、使用</title>
@@ -1774,22 +1649,128 @@
       </tags>
   </entry>
   <entry>
-    <title>写博客简易快捷桌面脚本</title>
-    <url>/2022/03/14/%E5%86%99%E5%8D%9A%E5%AE%A2%E5%BF%AB%E6%8D%B7%E6%A1%8C%E9%9D%A2%E8%84%9A%E6%9C%AC/</url>
-    <content><![CDATA[<h1 id="写博客简易快捷桌面脚本"><a href="#写博客简易快捷桌面脚本" class="headerlink" title="写博客简易快捷桌面脚本"></a>写博客简易快捷桌面脚本</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>新建记事本.txt复制以下代码<br>修改代码中的  你博客所在的位置<br>另存为写博客.bat，编码改为ansi</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">:_begin</span><br><span class="line">cls</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> 创建博客 输入0后回车</span><br><span class="line"><span class="built_in">echo</span> 打开博客 输入1后回车</span><br><span class="line"><span class="built_in">echo</span> 进入hexo模式 输入2后回车</span><br><span class="line"><span class="built_in">echo</span> 退出cmd 输入其他任意键后回车</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p Info=</span><br><span class="line"><span class="keyword">if</span> %Info%==0 (</span><br><span class="line">goto _set</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> %Info%==1 (</span><br><span class="line">goto _open</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> %Info%==2 (</span><br><span class="line">goto _other</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">goto _end</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:_set</span><br><span class="line"><span class="built_in">echo</span> 请输入新创建博客的名称</span><br><span class="line"><span class="built_in">set</span> /p name=</span><br><span class="line">e:</span><br><span class="line"><span class="built_in">cd</span> 你博客所在的位置</span><br><span class="line"><span class="keyword">if</span> exist %name%.md (</span><br><span class="line">start 你博客所在的位置\<span class="built_in">source</span>\_posts\%name%.md</span><br><span class="line"><span class="built_in">echo</span> %name%  文件已打开</span><br><span class="line">goto _check</span><br><span class="line">) </span><br><span class="line">hexo n <span class="string">&quot;%name%&quot;</span> &amp; rd 你博客所在的位置\<span class="built_in">source</span>\_posts\%name%  &amp; start E:\你博客所在的位置\<span class="built_in">source</span>\_posts\%name%.md &amp; start E:\my_blog_luq\<span class="built_in">source</span>\_posts &amp; cmd</span><br><span class="line"></span><br><span class="line">:_open</span><br><span class="line">e:</span><br><span class="line"><span class="built_in">cd</span> 你博客所在的位置\<span class="built_in">source</span>\_posts</span><br><span class="line">@<span class="built_in">echo</span> on</span><br><span class="line"><span class="built_in">dir</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> 请输入要打开博客的名称</span><br><span class="line"><span class="built_in">set</span> /p name=</span><br><span class="line"><span class="keyword">if</span> exist %name%.md (</span><br><span class="line">start 你博客所在的位置\<span class="built_in">source</span>\_posts\%name%.md</span><br><span class="line"><span class="built_in">echo</span> %name%  文件已打开</span><br><span class="line">goto _check</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">start 你博客所在的位置\<span class="built_in">source</span>\_posts</span><br><span class="line"><span class="built_in">echo</span> %name%  不存在，已打开文件夹</span><br><span class="line">goto _check</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:_check</span><br><span class="line"><span class="built_in">echo</span> 继续创建打开文件 输入0后回车</span><br><span class="line"><span class="built_in">echo</span> 进入hexo模式 输入1后回车</span><br><span class="line"><span class="built_in">echo</span> 退出cmd 输入其他任意键后回车</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p a=</span><br><span class="line"><span class="keyword">if</span> %a%==0 (</span><br><span class="line">goto _begin</span><br><span class="line"><span class="keyword">if</span> %a%==1 (</span><br><span class="line">goto _other</span><br><span class="line"><span class="keyword">else</span> (</span><br><span class="line">goto _end</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:_end</span><br><span class="line"><span class="keyword">else</span>(<span class="built_in">exit</span>)</span><br><span class="line">:_other</span><br><span class="line">cls</span><br><span class="line">e:</span><br><span class="line"><span class="built_in">cd</span> 你博客所在的位置</span><br><span class="line">cmd /k</span><br><span class="line">@<span class="built_in">echo</span> on</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="修改图标并隐藏"><a href="#修改图标并隐藏" class="headerlink" title="修改图标并隐藏"></a>修改图标并隐藏</h2><p>右键.bat文件，创建快捷方式</p>
-<p>右键.bat文件，打开属性</p>
-<p>在常规中，勾选隐藏</p>
-<p>右键单击快捷方式图标，打开属性</p>
-<p>点击常规，修改为你想要的名字(重命名，这里可以不要后缀)</p>
-<p>点击快捷方式，点击更改图标，修改为你想要的图标</p>
+    <title>git</title>
+    <url>/2022/03/28/git/</url>
+    <content><![CDATA[<h1 id="快速上手Git"><a href="#快速上手Git" class="headerlink" title="快速上手Git"></a>快速上手Git</h1><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>windows版的下载地址<a href="https://git-scm.com/">Git (git-scm.com)</a></p>
+<p>linux版<br>Fedora用前者，Ubuntu用后者</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ yum install git-core</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ apt-get install git</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>右键桌面，选择git bash here</p>
+<h4 id="用户信息"><a href="#用户信息" class="headerlink" title="用户信息"></a>用户信息</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git config --global user.name <span class="string">&quot;这里写你的名字&quot;</span></span><br><span class="line">$ git config --global user.email 这里写你的邮箱</span><br></pre></td></tr></table></figure>
+<h2 id="使用Git"><a href="#使用Git" class="headerlink" title="使用Git"></a>使用Git</h2><p>在需要备份的文件夹下，右键，选择git bash here</p>
+<h3 id="新建项目"><a href="#新建项目" class="headerlink" title="新建项目"></a>新建项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+<h3 id="拷贝项目"><a href="#拷贝项目" class="headerlink" title="拷贝项目"></a>拷贝项目</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> 这里写你要克隆的仓库</span><br></pre></td></tr></table></figure>
+<h3 id="项目保存到当地"><a href="#项目保存到当地" class="headerlink" title="项目保存到当地"></a>项目保存到当地</h3><p>在已经有git项目的文件夹下会有.git的隐藏文件，里面存储着本地的项目快照</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git add 项目</span><br><span class="line">$ git commit -m <span class="string">&quot;备注信息&quot;</span></span><br></pre></td></tr></table></figure>
+<p>add相当于给文件夹拍照，commit相当于将照片保存</p>
+<h3 id="项目上传云端和从云端更新"><a href="#项目上传云端和从云端更新" class="headerlink" title="项目上传云端和从云端更新"></a>项目上传云端和从云端更新</h3><p>设置原创仓库</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add 这里自定义仓库名 网址</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push 这里写要上传到的仓库 这里写需要上传的分支</span><br><span class="line">$ git fetch 这里写需要下载的仓库</span><br></pre></td></tr></table></figure>
+<h1 id="进阶使用"><a href="#进阶使用" class="headerlink" title="进阶使用"></a>进阶使用</h1><p>……待跟新</p>
+<h1 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h1><p><a href="http://git.oschina.net/progit/">Pro Git（中文版） (oschina.net)</a></p>
+]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>win下 hexo架构+butterfly主题+live2d看板娘 博客搭建</title>
+    <url>/2022/03/09/win%E4%B8%8B-hexo%E6%9E%B6%E6%9E%84-butterfly%E4%B8%BB%E9%A2%98-live2d%E7%9C%8B%E6%9D%BF%E5%A8%98-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>需要git<br>下载nodejs lts版本 nodejs.org/zh-cn/<br>安装时选择固定路径，勾选自动安装相关软件<br>cmd下： (或者git下用linux指令)<br>npm install -g cnpm —registry=<a href="http://registry.npm.taobao.org">http://registry.npm.taobao.org</a><br>cnpm install -g hexo-cli</p>
+<h2 id="依次输入指令"><a href="#依次输入指令" class="headerlink" title="依次输入指令"></a>依次输入指令</h2><p>chdir查看当前目录<br>md blog或者mkdir E:\blog（最好不要blog，改个名字)<br>e:<br>cd e:\blog<br>进入根目录<br>hexo init<br>npm install<br>hexo s<br>hexo n “a”创建文件<br>cd source_posts<br>修改文件<br>cd..退回上一文件夹<br>hexo g本地静态保存<br>hexo s本地localhost:4000启动(在s后加  -p 改端口)</p>
+<h2 id="静态网页实现"><a href="#静态网页实现" class="headerlink" title="静态网页实现"></a>静态网页实现</h2><p>在gitee(要ppage)或者github上创建公开仓库.io结尾<br>cnpm install —save hexo-deployer-git<br>编辑_config.yml:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">	type: 	</span><br><span class="line">	gitrepo: https://github.com/你的用户名.github.io.git</span><br><span class="line">	branch: master</span><br></pre></td></tr></table></figure>
+<p>hexo d 推送博客到远端</p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><p>git clone -b master <a href="https://github.com/jerryc127/hexo-theme-butterfly.git">https://github.com/jerryc127/hexo-theme-butterfly.git</a> themes/butterfly  下载主题<br>(没pug和stylus渲染器要下载)<br>编辑_config.yml:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">themes:butterfly</span><br></pre></td></tr></table></figure>
+<p>hexo clean清除缓存文件和已生成公开文件<br>hexo g</p>
+<h2 id="添加live2d看板娘"><a href="#添加live2d看板娘" class="headerlink" title="添加live2d看板娘"></a>添加live2d看板娘</h2><p>npm uninstall —save hexo-helper-live2d(如果下载了官方的要卸载)<br>cd进入themes/butterfly/source<br>git clone <a href="https://github.com/stevenjoezhang/live2d-widget.git(443报错就等等再试">https://github.com/stevenjoezhang/live2d-widget.git(443报错就等等再试</a>)<br>修改live2d-widget的autoload.js的live2d_path改为下方那个<br>进入butterfly下layout下includes的head.pug末尾粘贴</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">script(src=&#x27;live2d-widget/autoload.js&#x27;)</span><br></pre></td></tr></table></figure>
+<p>最后在根目录下的config加入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">live2d:</span><br><span class="line">	enable:true</span><br></pre></td></tr></table></figure>
+<p>修改ive2d-widget的参数：<br>    waifu.css修改位置<br>    waifu-tips.js修改文本</p>
+<h2 id="增加搜索"><a href="#增加搜索" class="headerlink" title="增加搜索"></a>增加搜索</h2><p>npm install hexo-generator-searchdb —save<br>vim source/_data/butterfly.yml<br>localsearch改true</p>
+<h2 id="参考手册"><a href="#参考手册" class="headerlink" title="参考手册"></a>参考手册</h2><p>hexo手册<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a><br>butterfly文档<a href="https://butterfly.js.org/posts/21cfbf15/">https://butterfly.js.org/posts/21cfbf15/</a><br>改网站搜索免费社交图标<a href="https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free">https://fontawesome.com/v5.15/icons?d=gallery&amp;p=1&amp;m=free</a><br>改网站顶置图片<a href="https://pic.netbian.com/4kdongman/">https://pic.netbian.com/4kdongman/</a><br>live2d内容网站：<br>api:github.com/fghrsh/live2d_api<br>模型:github.com/summerscar/live2dDemo<br>参考:<a href="https://www.fghrsh.net/post/123.html">https://www.fghrsh.net/post/123.html</a><br> waifu-tips.js 的详细设置说明，和 waifu-tips.json 节点说明，见<a href="https://github.com/fghrsh/live2d_demo">https://github.com/fghrsh/live2d_demo</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
       </categories>
       <tags>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>不定积分</title>
+    <url>/2022/03/31/%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/</url>
+    <content><![CDATA[<h1 id="不定积分"><a href="#不定积分" class="headerlink" title="不定积分"></a>不定积分</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<p>f(x) + c = ∫f’(x)dx<br>运算法则类似导数运算</p>
+<h2 id="求不定积分"><a href="#求不定积分" class="headerlink" title="求不定积分"></a>求不定积分</h2><p>从上到下检索变换规律，每次变化前检查是否能凑微分</p>
+<h2 id="绝对值"><a href="#绝对值" class="headerlink" title="绝对值"></a>绝对值</h2><p>分情况讨论</p>
+<h3 id="特定形式"><a href="#特定形式" class="headerlink" title="特定形式"></a>特定形式</h3><h4 id="分部积分"><a href="#分部积分" class="headerlink" title="分部积分"></a>分部积分</h4><p>对于两个初等函数乘积的积分(v=反对幂指三)(先后)<br>∫vdu = uv - ∫udv<br>注意：指三需要循环求</p>
+<h4 id="猜测法"><a href="#猜测法" class="headerlink" title="猜测法"></a>猜测法</h4><p>∫g(x)/f(x)^2dx=F(x)+c<br>设F(x)=u(x)/f(x)<br>则g=u’f-uf’直接猜测法</p>
+<h3 id="分式"><a href="#分式" class="headerlink" title="分式"></a>分式</h3><p>假分数：<br>通过除法变为真分数</p>
+<p>真分数：<br>分母裂项(因式分解，待定系数法求分子)<br>分子去和差<br>分子变化为常数(e^x除外)<br>对于三角则凑出类似下方格式来凑微分 即 [A(导数)+B(原函数)]/原函数</p>
+<script type="math/tex; mode=display">
+[a(sinx-cosx)+b(sinx+cos)]/(sinx+cosx)</script><p>分母配方(平方和)</p>
+<h3 id="根式换元"><a href="#根式换元" class="headerlink" title="根式换元"></a>根式换元</h3><p>√((ax+b)/(cx+d)) 用 sin^2 + cos^2 = 1<br>√(ax+b)或√(e^x+b)直接换<br>√(ax^2+bx+c) 配方后三角换元</p>
+<h3 id="三角处理"><a href="#三角处理" class="headerlink" title="三角处理"></a>三角处理</h3><p>三角变换<br>奇次凑微分<br>偶次降次<br>分母去和差<br>万能公式：u=tan(x/2) sinx=2u/u^2+1 cosx=(1-u^2)/(1+u^2)</p>
+<h2 id="积分表"><a href="#积分表" class="headerlink" title="积分表"></a>积分表</h2><p>大部分积分表同导数表<br>重要积分/导数：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>导数</th>
+<th>原函数</th>
+<th>导数</th>
+<th>原函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1/(1+cosx)</td>
+<td>tan(x/2)</td>
+<td>sin2x</td>
+<td>sin^2(x)</td>
+</tr>
+<tr>
+<td>tanx</td>
+<td>-In\</td>
+<td>cosx\</td>
+<td></td>
+<td>cotx</td>
+<td>In\</td>
+<td>sinx\</td>
+<td></td>
+</tr>
+<tr>
+<td>secx</td>
+<td>In\</td>
+<td>secx+tanx\</td>
+<td></td>
+<td>cscx</td>
+<td>In\</td>
+<td>csc-cotx\</td>
+<td></td>
+</tr>
+<tr>
+<td>sec^2(x)</td>
+<td>tanx</td>
+<td>secx * tanx</td>
+<td>sec(x)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="三角变换"><a href="#三角变换" class="headerlink" title="三角变换"></a>三角变换</h2><p>cos2x = cos^2(x) - sin^2(x) = 1 -  2sin^2(x)<br>1 + tan^2 = sec^2<br>1 = cos^2 + sin^2<br>1-sinx=(sin2/x - cosx/2)^2<br>(1+sinx)/(1+cosx)=sec^2(x/2) /2 + tan(x/2)此条常用于e^x(f+f’)<br>tan(x/2)=sinx/(1+cosx)<br>1/(a+bcosx)=1/(m+kcos^2(x))此条常用于常数加三件作为分母<br>=sec^2(x)/(msec^2(x)+k)=dtanx/(mtanx+m+k)<br>积化和差，和差化积</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
       </tags>
   </entry>
   <entry>
@@ -1848,50 +1829,22 @@
       </tags>
   </entry>
   <entry>
-    <title>向量代数与空间解析几何</title>
-    <url>/2022/05/13/%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/</url>
-    <content><![CDATA[<h1 id="向量代数与空间解析几何"><a href="#向量代数与空间解析几何" class="headerlink" title="向量代数与空间解析几何"></a>向量代数与空间解析几何</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
-<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><h3 id="方向角"><a href="#方向角" class="headerlink" title="方向角"></a>方向角</h3><p>cosA=x/|<strong>r</strong>|   cosB=y/|<strong>r</strong>|   cosC=z/|<strong>r</strong>|<br>cos^2(A)+cos^2(B)+cos^2(C)=1<br>{cosA，cosB，cosC}=<strong>r</strong>/|<strong>r</strong>|</p>
-<h3 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h3><script type="math/tex; mode=display">
-a·b = |a||b|cos<a,b> = a_xb_x+a_yb_y+a_zb_z = a*(b在a上的投影)</script><h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><script type="math/tex; mode=display">
-|a × b| = |a||b|sin<a,b>=\left|
-\begin{array}{cccc} 
-i&j&k \\ 
-a_x&a_y&a_z\\ 
-b_x&b_y&b_z
-\end{array}
-\right|=
-a和b形成的平行四边形面积</script><p> 方向为右手食指由a绕向b时拇指方向 </p>
-<h3 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h3><script type="math/tex; mode=display">
-[abc]=a×b·c=\left|\begin{array}{cccc} 
-c_x&c_y&c_z\\ 
-a_x&a_y&a_z\\ 
-b_x&b_y&b_z
-\end{array}
-\right|=
-a,b和c形成的平行六面体体积</script><h2 id="空间平面方程"><a href="#空间平面方程" class="headerlink" title="空间平面方程"></a>空间平面方程</h2><p>点法式：A(x-x0)+B(y-y0)+C(z-z0)=0，其中(x0,y0,z0)为面上一点，(A,B,C)为法线<br>利用叉乘可以求法线</p>
-<p>截距式：x/a+y/b+z/c=1，其中a,b,c为面在x,y,z轴上的截距</p>
-<p>一般式：由点法式化简括号得</p>
-<h2 id="空间直线方程"><a href="#空间直线方程" class="headerlink" title="空间直线方程"></a>空间直线方程</h2><p>点向(对称)式：(x-x0)/m=(y-y0)/n=(z-z0)/p，其中(x0,y0,z0)为线上一点，(m,n,p)为与直线平行的方向向量</p>
-<p>参数式：由点向式得 x=mt+x0 y=nt+y0 z=pt+z0</p>
-<p>一般式：两个平面方程的交集<br>通过两个平面的法线叉乘可以的到与直线平行的向量，再通过解方程求出1点，即可转化为点向式</p>
-<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="夹角"><a href="#夹角" class="headerlink" title="夹角"></a>夹角</h3><p>面面角(不大于90°)：cosθ=|n1·n2|/|n1||n2|，其中n1,n2分别为两个平面的法向量</p>
-<p>线线角：cosθ=|s1·s2|/|s1||s2|，其中s1,s2分别为两条直线方向向量</p>
-<p>线面角(不大于90°)：sin=|s1·n1|/|s1||n1|，其中s1,n1分别为直线方向向量和平面的法向量</p>
-<h3 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h3><p>两到点：d=√((x2-x1)^2+(y2-y1)^2+(z2-z1)^2)</p>
-<p>点到线：参数式设线上一点，求 两点最小值 或者 任一连线向量·方向向量 得到垂足点，求点到点距离即可(同下一条) </p>
-<p>点到面：d=|M1M2 · n|/|n|，其中M1M2为点到面上的任一向量，n为平面的法向量</p>
-<p>线到面：同点到面</p>
-<p>面到面：同点到面，d=|D1-D2|/|n|，其中D1,D2为两个平面的方程同系数时的常数项(由方程带入n相减得) ，n为平面的法向量 </p>
-<p>线到线：s1×s2·M1M2≠0异面，其中s1,s2分别为两条直线方向向量，M1M2为两直线上点形成的任一向量<br>做平行线使两直线在同一平面，取原直线一点，求点到面距离即可</p>
-<h3 id="线面投影、平面束"><a href="#线面投影、平面束" class="headerlink" title="线面投影、平面束"></a>线面投影、平面束</h3><p>平面束(过L的所有平面)=面1+λ面2 </p>
-<p>线面投影=过L与面垂直的面相交形成的交线<br>平面束法向量 · 面法向量 = 0 求得垂直面</p>
+    <title>写博客简易快捷桌面脚本</title>
+    <url>/2022/03/14/%E5%86%99%E5%8D%9A%E5%AE%A2%E5%BF%AB%E6%8D%B7%E6%A1%8C%E9%9D%A2%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<h1 id="写博客简易快捷桌面脚本"><a href="#写博客简易快捷桌面脚本" class="headerlink" title="写博客简易快捷桌面脚本"></a>写博客简易快捷桌面脚本</h1><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>新建记事本.txt复制以下代码<br>修改代码中的  你博客所在的位置<br>另存为写博客.bat，编码改为ansi</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line">:_begin</span><br><span class="line">cls</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> 创建博客 输入0后回车</span><br><span class="line"><span class="built_in">echo</span> 打开博客 输入1后回车</span><br><span class="line"><span class="built_in">echo</span> 进入hexo模式 输入2后回车</span><br><span class="line"><span class="built_in">echo</span> 退出cmd 输入其他任意键后回车</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p Info=</span><br><span class="line"><span class="keyword">if</span> %Info%==0 (</span><br><span class="line">goto _set</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> %Info%==1 (</span><br><span class="line">goto _open</span><br><span class="line">)</span><br><span class="line"><span class="keyword">if</span> %Info%==2 (</span><br><span class="line">goto _other</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">goto _end</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:_set</span><br><span class="line"><span class="built_in">echo</span> 请输入新创建博客的名称</span><br><span class="line"><span class="built_in">set</span> /p name=</span><br><span class="line">e:</span><br><span class="line"><span class="built_in">cd</span> 你博客所在的位置</span><br><span class="line"><span class="keyword">if</span> exist %name%.md (</span><br><span class="line">start 你博客所在的位置\<span class="built_in">source</span>\_posts\%name%.md</span><br><span class="line"><span class="built_in">echo</span> %name%  文件已打开</span><br><span class="line">goto _check</span><br><span class="line">) </span><br><span class="line">hexo n <span class="string">&quot;%name%&quot;</span> &amp; rd 你博客所在的位置\<span class="built_in">source</span>\_posts\%name%  &amp; start E:\你博客所在的位置\<span class="built_in">source</span>\_posts\%name%.md &amp; start E:\my_blog_luq\<span class="built_in">source</span>\_posts &amp; cmd</span><br><span class="line"></span><br><span class="line">:_open</span><br><span class="line">e:</span><br><span class="line"><span class="built_in">cd</span> 你博客所在的位置\<span class="built_in">source</span>\_posts</span><br><span class="line">@<span class="built_in">echo</span> on</span><br><span class="line"><span class="built_in">dir</span></span><br><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">echo</span> 请输入要打开博客的名称</span><br><span class="line"><span class="built_in">set</span> /p name=</span><br><span class="line"><span class="keyword">if</span> exist %name%.md (</span><br><span class="line">start 你博客所在的位置\<span class="built_in">source</span>\_posts\%name%.md</span><br><span class="line"><span class="built_in">echo</span> %name%  文件已打开</span><br><span class="line">goto _check</span><br><span class="line">) <span class="keyword">else</span> (</span><br><span class="line">start 你博客所在的位置\<span class="built_in">source</span>\_posts</span><br><span class="line"><span class="built_in">echo</span> %name%  不存在，已打开文件夹</span><br><span class="line">goto _check</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:_check</span><br><span class="line"><span class="built_in">echo</span> 继续创建打开文件 输入0后回车</span><br><span class="line"><span class="built_in">echo</span> 进入hexo模式 输入1后回车</span><br><span class="line"><span class="built_in">echo</span> 退出cmd 输入其他任意键后回车</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p a=</span><br><span class="line"><span class="keyword">if</span> %a%==0 (</span><br><span class="line">goto _begin</span><br><span class="line"><span class="keyword">if</span> %a%==1 (</span><br><span class="line">goto _other</span><br><span class="line"><span class="keyword">else</span> (</span><br><span class="line">goto _end</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">:_end</span><br><span class="line"><span class="keyword">else</span>(<span class="built_in">exit</span>)</span><br><span class="line">:_other</span><br><span class="line">cls</span><br><span class="line">e:</span><br><span class="line"><span class="built_in">cd</span> 你博客所在的位置</span><br><span class="line">cmd /k</span><br><span class="line">@<span class="built_in">echo</span> on</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="修改图标并隐藏"><a href="#修改图标并隐藏" class="headerlink" title="修改图标并隐藏"></a>修改图标并隐藏</h2><p>右键.bat文件，创建快捷方式</p>
+<p>右键.bat文件，打开属性</p>
+<p>在常规中，勾选隐藏</p>
+<p>右键单击快捷方式图标，打开属性</p>
+<p>点击常规，修改为你想要的名字(重命名，这里可以不要后缀)</p>
+<p>点击快捷方式，点击更改图标，修改为你想要的图标</p>
 ]]></content>
       <categories>
-        <category>math</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>math</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -2002,6 +1955,53 @@ a>0\\
 <h5 id="注意-1"><a href="#注意-1" class="headerlink" title="注意"></a>注意</h5><p>e^x出现均由其绝对</p>
 <p>当In单独出现或者和x相乘出现时才起作用</p>
 <h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>微元法：找到每dx占的一小份，求出通式后积分</p>
+]]></content>
+      <categories>
+        <category>math</category>
+      </categories>
+      <tags>
+        <tag>math</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>向量代数与空间解析几何</title>
+    <url>/2022/05/13/%E5%90%91%E9%87%8F%E4%BB%A3%E6%95%B0%E4%B8%8E%E7%A9%BA%E9%97%B4%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/</url>
+    <content><![CDATA[<h1 id="向量代数与空间解析几何"><a href="#向量代数与空间解析几何" class="headerlink" title="向量代数与空间解析几何"></a>向量代数与空间解析几何</h1><p>注意：只收录方法和简易(重要)定义(用于复习)</p>
+<h2 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h2><h3 id="方向角"><a href="#方向角" class="headerlink" title="方向角"></a>方向角</h3><p>cosA=x/|<strong>r</strong>|   cosB=y/|<strong>r</strong>|   cosC=z/|<strong>r</strong>|<br>cos^2(A)+cos^2(B)+cos^2(C)=1<br>{cosA，cosB，cosC}=<strong>r</strong>/|<strong>r</strong>|</p>
+<h3 id="数量积"><a href="#数量积" class="headerlink" title="数量积"></a>数量积</h3><script type="math/tex; mode=display">
+a·b = |a||b|cos<a,b> = a_xb_x+a_yb_y+a_zb_z = a*(b在a上的投影)</script><h3 id="向量积"><a href="#向量积" class="headerlink" title="向量积"></a>向量积</h3><script type="math/tex; mode=display">
+|a × b| = |a||b|sin<a,b>=\left|
+\begin{array}{cccc} 
+i&j&k \\ 
+a_x&a_y&a_z\\ 
+b_x&b_y&b_z
+\end{array}
+\right|=
+a和b形成的平行四边形面积</script><p> 方向为右手食指由a绕向b时拇指方向 </p>
+<h3 id="混合积"><a href="#混合积" class="headerlink" title="混合积"></a>混合积</h3><script type="math/tex; mode=display">
+[abc]=a×b·c=\left|\begin{array}{cccc} 
+c_x&c_y&c_z\\ 
+a_x&a_y&a_z\\ 
+b_x&b_y&b_z
+\end{array}
+\right|=
+a,b和c形成的平行六面体体积</script><h2 id="空间平面方程"><a href="#空间平面方程" class="headerlink" title="空间平面方程"></a>空间平面方程</h2><p>点法式：A(x-x0)+B(y-y0)+C(z-z0)=0，其中(x0,y0,z0)为面上一点，(A,B,C)为法线<br>利用叉乘可以求法线</p>
+<p>截距式：x/a+y/b+z/c=1，其中a,b,c为面在x,y,z轴上的截距</p>
+<p>一般式：由点法式化简括号得</p>
+<h2 id="空间直线方程"><a href="#空间直线方程" class="headerlink" title="空间直线方程"></a>空间直线方程</h2><p>点向(对称)式：(x-x0)/m=(y-y0)/n=(z-z0)/p，其中(x0,y0,z0)为线上一点，(m,n,p)为与直线平行的方向向量</p>
+<p>参数式：由点向式得 x=mt+x0 y=nt+y0 z=pt+z0</p>
+<p>一般式：两个平面方程的交集<br>通过两个平面的法线叉乘可以的到与直线平行的向量，再通过解方程求出1点，即可转化为点向式</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><h3 id="夹角"><a href="#夹角" class="headerlink" title="夹角"></a>夹角</h3><p>面面角(不大于90°)：cosθ=|n1·n2|/|n1||n2|，其中n1,n2分别为两个平面的法向量</p>
+<p>线线角：cosθ=|s1·s2|/|s1||s2|，其中s1,s2分别为两条直线方向向量</p>
+<p>线面角(不大于90°)：sin=|s1·n1|/|s1||n1|，其中s1,n1分别为直线方向向量和平面的法向量</p>
+<h3 id="距离"><a href="#距离" class="headerlink" title="距离"></a>距离</h3><p>两到点：d=√((x2-x1)^2+(y2-y1)^2+(z2-z1)^2)</p>
+<p>点到线：参数式设线上一点，求 两点最小值 或者 任一连线向量·方向向量 得到垂足点，求点到点距离即可(同下一条) </p>
+<p>点到面：d=|M1M2 · n|/|n|，其中M1M2为点到面上的任一向量，n为平面的法向量</p>
+<p>线到面：同点到面</p>
+<p>面到面：同点到面，d=|D1-D2|/|n|，其中D1,D2为两个平面的方程同系数时的常数项(由方程带入n相减得) ，n为平面的法向量 </p>
+<p>线到线：s1×s2·M1M2≠0异面，其中s1,s2分别为两条直线方向向量，M1M2为两直线上点形成的任一向量<br>做平行线使两直线在同一平面，取原直线一点，求点到面距离即可</p>
+<h3 id="线面投影、平面束"><a href="#线面投影、平面束" class="headerlink" title="线面投影、平面束"></a>线面投影、平面束</h3><p>平面束(过L的所有平面)=面1+λ面2 </p>
+<p>线面投影=过L与面垂直的面相交形成的交线<br>平面束法向量 · 面法向量 = 0 求得垂直面</p>
 ]]></content>
       <categories>
         <category>math</category>
