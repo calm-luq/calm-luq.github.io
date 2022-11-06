@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>c语言汇总 | calm-luq-blog</title><meta name="keywords" content="c"><meta name="author" content="Luq"><meta name="copyright" content="Luq"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="C 的历史早期 C1969　:基于 BCPL 创建 B ，以作为 Unix 的系统程序语言替代 PDP-7 汇编器 1971 ：于将 B 移植到 PDP-11 时创建 NB （新“ B ”） 1972 ：语言更名为 C 1973 ：以 C 重写 1978 ： The C Programming Language ，第1版 标准 C1983 ： ANSI 建立 X3J11 委员会 1988 ： Th">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c语言汇总">
+<meta property="og:url" content="https://calm-luq.github.io/2022/09/09/c%E8%AF%AD%E8%A8%80%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="calm-luq-blog">
+<meta property="og:description" content="C 的历史早期 C1969　:基于 BCPL 创建 B ，以作为 Unix 的系统程序语言替代 PDP-7 汇编器 1971 ：于将 B 移植到 PDP-11 时创建 NB （新“ B ”） 1972 ：语言更名为 C 1973 ：以 C 重写 1978 ： The C Programming Language ，第1版 标准 C1983 ： ANSI 建立 X3J11 委员会 1988 ： Th">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://calm-luq.github.io/cover&top_img/c.jpg">
+<meta property="article:published_time" content="2022-09-08T16:27:40.000Z">
+<meta property="article:modified_time" content="2022-10-02T12:57:25.880Z">
+<meta property="article:author" content="Luq">
+<meta property="article:tag" content="c">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://calm-luq.github.io/cover&top_img/c.jpg"><link rel="shortcut icon" href="/img/favicon.ico"><link rel="canonical" href="https://calm-luq.github.io/2022/09/09/c%E8%AF%AD%E8%A8%80%E6%B1%87%E6%80%BB/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":5},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Luq","link":"链接: ","source":"来源: calm-luq-blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'c语言汇总',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-10-02 20:57:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><link rel="stylesheet" href="APlayer.min.css"><div id="aplayer"></div><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js" async></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><script src="live2d-widget/autoload.js"></script><meta name="generator" content="Hexo 6.0.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/face.jpg" onerror="onerror=null;src='/img/friend_404.jpg'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/cover&amp;top_img/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/cover&amp;top_img/c.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">calm-luq-blog</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 总览</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 更多</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/cover&amp;top_img/"><i class="fa-fw fas fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">c语言汇总</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-09-08T16:27:40.000Z" title="发表于 2022-09-09 00:27:40">2022-09-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2022-10-02T12:57:25.880Z" title="更新于 2022-10-02 20:57:25">2022-10-02</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/c/">c</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="c语言汇总"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="C-的历史"><a href="#C-的历史" class="headerlink" title="C 的历史"></a>C 的历史</h1><h2 id="早期-C"><a href="#早期-C" class="headerlink" title="早期 C"></a>早期 C</h2><p>1969　:基于 BCPL 创建 B ，以作为 Unix 的系统程序语言替代 PDP-7 汇编器</p>
+<p>1971 ：于将 B 移植到 PDP-11 时创建 NB （新“ B ”）</p>
+<p>1972 ：语言更名为 C</p>
+<p>1973 ：以 C 重写</p>
+<p>1978 ： The C Programming Language ，第1版</p>
+<h2 id="标准-C"><a href="#标准-C" class="headerlink" title="标准 C"></a>标准 C</h2><p>1983 ： ANSI 建立 X3J11 委员会</p>
+<p>1988 ： The C Programming Language ，第2版</p>
+<p>1989 ： <strong>C89</strong>，ANSI C 标准出版</p>
+<ol>
+<li>代码化的既存实践</li>
+<li>新特性 ：volatile 、 enum 、有符号整数 、 void 、本地环境</li>
+<li>来自 C++ ： const 、函数原型</li>
+</ol>
+<p>1990 ： <strong>C90</strong> ，ANSI C 标准被接纳为 ISO/IEC 9899-1990</p>
+<p>1995 ： <strong>C95</strong> （ ISO/IEC 9899 AM1 ）（<a target="_blank" rel="noopener" href="http://infostore.saiglobal.com/store/Details.aspx?DocN=isoc000767513">在线商店</a>）</p>
+<ol>
+<li>极大扩充了宽和多字节字符支持（ wctype.h 、 wchar.h 、对流 I/O 的添加和更改等）</li>
+<li>双标符、 iso646.h</li>
+</ol>
+<p>1995 ：技术勘误 1（ ISO/IEC 9899 TCOR1 ）</p>
+<p>1996 ：技术勘误 2（ ISO/IEC 9899 TCOR2 ）</p>
+<p>1999 ：<strong>C99</strong> （ ISO/IEC 9899:1999 ）</p>
+<ol>
+<li>新特性： _Bool 、 long long 、 stdint.h 、 inttypes.h 、 restrict 、复合字面量、变长度数组、伸缩数组成员、指派初始化器、 fenv.h 、变参数宏、复数、 __func__ 、十六进制浮点格式（ %a ）、 lconv 的货币格式化、 isblank 、窄与宽字符串字面量的连接、枚举的尾逗号、类函数宏的空参数、 STDC_* pragma 、 va_copy 、 tmpnam 的空返回、 setvbuf 中的空指针、 printf 的 hh 与 ll 长度指定符、 snprintf 、 _Exit 、 tgmath.h 、仿 POSIX strftime 说明符</li>
+<li>来自 C++ ： inline 、声明与代码混合、 for 循环的 init 子句中的声明、  注释、源代码中的通用字符名</li>
+<li>移除隐式函数声明和隐式 int</li>
+</ol>
+<p>2001 ：技术勘误 1 （ ISO/IEC 9899:1999/Cor.1:2001(E) ）</p>
+<p>2004 ：技术勘误 2 （ ISO/IEC 9899:1999/Cor.2:2004(E) ）</p>
+<p>2004 ：Unicode TR（ ISO/IEC TR 19769:2004 ）（<a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1040.pdf">2013-11-07 草案</a>）</p>
+<p>2007 ：技术勘误 3 （ ISO/IEC 9899:1999/Cor.3:2007(E) ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1256.pdf">2007-09-07草案</a>）</p>
+<p>2007 ：边界检查接口 TR（ ISO/IEC TR 24731-1:2007 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1225.pdf">2007-03-28 草案</a>）</p>
+<p>2008 ：嵌入式 TR （ ISO/IEC TR 18037:2008 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1021.pdf">2003-09-24 草案</a>）</p>
+<p>2009 ：十进制浮点数 TR（ ISO/IEC TR 24732:2009 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1241.pdf">2007-07-05 草案</a>）</p>
+<p>2009 ：特殊数学函数 TR（ ISO/IEC TR 24747:2009 ）（<a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1182.pdf">2006-08-02 草案</a>）</p>
+<p>2010 ：动态分配函数 TR（ ISO/IEC TR 24731-2:2010 ）<a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1248.pdf">2007-08-15 草案</a>）</p>
+<p>2011 ： <strong>C11</strong> （ ISO/IEC 9899:2011 ）（<a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1570.pdf">2011-04-12 草案</a>）</p>
+<ol>
+<li>具线程的内存模型 、 stdatomic.h 、 threads.h 、泛型函数、 _Alignas/_Alignof 、 _Noreturn 、 _Static_assert 、可分析性扩展、对复数和虚数类型的扩展、匿名结构体与联合体、独占文件打开模式、 quick_exit</li>
+<li>移除 gets</li>
+<li>来自边界检查接口 TR ：边界检查接口</li>
+<li>来自 Unicode TR ： char16_t 、 char32_t ，及 uchar.h</li>
+</ol>
+<p>2012 ：技术勘误 1 （ ISO/IEC 9899:2011/Cor 1:2012 ）</p>
+<p>2013 ：安全代码规则 TS （ ISO/IEC TS 17961:2013 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1624.pdf">2012-12-26</a> 草案）</p>
+<p>2014 ：FP TS 部分 1 ：二进制浮点算术（ ISO/IEC TS 18661-1:2014 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/JTC1/sc22/wg14/www/docs/n1778.pdf">2013 草案</a>）</p>
+<ol>
+<li>提供对 C11 的更改（主要对附录 F ），以覆盖所有基本要求及一些 IEC 60559:2011 的推荐（ C11 构建于 IEC 60559:1989 ）</li>
+</ol>
+<p>2015 ：FP TS 部分 2 ：十进制浮点算术（ ISO/IEC TS 18661-2:2015 ）( <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1912.pdf">2015 草案</a>）</p>
+<ol>
+<li>提供对 C11 的更改，以支持所有要求，加上一些 IEC 60559:2011 对十进制浮点算术的基本推荐。它替代了 ISO/IEC TR 24732:2009 。</li>
+</ol>
+<p>2015 ：FP TS 部分 3 ：交换及扩展类型（ ISO/IEC TS 18661-3:2015 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1945.pdf">2015 草案</a>）</p>
+<ol>
+<li>提供对C11的更改，以支持IEC 60559:2011对扩展浮点格式及交换格式的推荐，包括算术和非算术。</li>
+</ol>
+<p>2015 ：FP TS 部分 4 ：补充的函数（ ISO/IEC TS 18661-4:2015 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1950.pdf">2015 草案</a>）</p>
+<ol>
+<li>提供对 C11 的更改，以支持所有 IEC 60559:2011 推荐的数学运算，包括 π 单位的三角函数、平方根倒数、复利等。</li>
+</ol>
+<p>2016 ：FP TS 部分 5 ：补充的属性（ ISO/IEC TS 18661-5:2016 ）（ <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2004.pdf">2016 草案</a>）</p>
+<ol>
+<li>提供对 C11 的更改，以支持所有 IEC 60559:2011 推荐的补充属性（求值模型、异常处理、可再现性等）</li>
+</ol>
+<p>2018: <strong>C17</strong> （ ISO/IEC 9899:2018 ）（ <a target="_blank" rel="noopener" href="https://files.lhmouse.com/standards/ISO C N2176.pdf">最终草案</a>）</p>
+<h3 id="未来发展"><a href="#未来发展" class="headerlink" title="未来发展"></a>未来发展</h3><p>并行 TS （草案 <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2017.pdf">n2017</a> 2016-03-10 ）</p>
+<p>事务性内存 TS （草案 <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n1961.pdf">n1961</a> 2015-09-23 ）</p>
+<p><strong>C23</strong> （草案 <a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2731.pdf">n2731</a> 2021-10-18 ）</p>
+<ol>
+<li>C11 后缺陷报告列表（包含为 C2x 安排者）(<a target="_blank" rel="noopener" href="http://www.open-std.org/jtc1/sc22/wg14/www/docs/n2396.htm">n2396</a> 2019-04)</li>
+</ol>
+<h1 id="C语言内容"><a href="#C语言内容" class="headerlink" title="C语言内容"></a>C语言内容</h1><h2 id="语言"><a href="#语言" class="headerlink" title="语言"></a>语言</h2><h3 id="编译流程"><a href="#编译流程" class="headerlink" title="编译流程"></a>编译流程</h3><h4 id="第一阶段"><a href="#第一阶段" class="headerlink" title="第一阶段"></a>第一阶段</h4><p>映射源文件(通常是以某种多字节，例如UTF-8编码的文本文件)的单独字节为基础源字符集，特别注意要替换依赖OS的行尾指示符<br>基础源字符集(存储源代码用的字符集)：<br>a b c d e f g h i j k l m n o p q r s t u v w x y z<br>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z<br>0 1 2 3 4 5 6 7 8 9<br>_ { } [ ] # ( ) &lt; &gt; % : ; . ? * + - / ^ &amp; | ~ ! = , \ “ ‘<br>空白字符(空格 水平制表 垂直制表 换页 换行)</p>
+<p>用对应的单字节表示替换三标符<br>??&lt;替换为{<br>??&gt;替换为}<br>??(替换为[<br>??)替换为]<br>??=替换为#<br>??/替换为\<br>??’替换为^<br>??!替换为|<br>??-替换为~<br>注意：现在编译器已经默认不作转义但是会给出提示</p>
+<h4 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h4><p>凡反斜杠出现在行尾时，删除反斜杠和换行符，和下一行物理源码行组合成一个逻辑源码行<br>若此步骤后，非空源文件不以换行符结束，则行为未定义</p>
+<h4 id="第三阶段"><a href="#第三阶段" class="headerlink" title="第三阶段"></a>第三阶段</h4><p>用空格代替注释，其他长空白是否用空格代替需要看编译器具体实现</p>
+<p>将源文件分解为注释、空白字符和预处理记号<br>预处理记号包括：头文件，标识符，预处理数字(包括整数常量和浮点常量和一些非法记号)，字符常量，字符串字面量，运算符与标点，不属于任何其他类别的单独非空白字符</p>
+<p>最大吞噬(maximal munch) (大嘴法、贪心法)：将下一个最长字符序列作为下个预处理记号(即下一个符号为从当前字符开始可能组成一个符号的最长字符串)</p>
+<p>最大吞噬的例外：头文件名的预处理记号仅在#include和#pragma的实现定义位置处形成</p>
+<h4 id="第四阶段"><a href="#第四阶段" class="headerlink" title="第四阶段"></a>第四阶段</h4><p>执行预处理器</p>
+<h1 id="include指令所引入的每个文件都需要经历一到四阶段，并递归执行"><a href="#include指令所引入的每个文件都需要经历一到四阶段，并递归执行" class="headerlink" title="include指令所引入的每个文件都需要经历一到四阶段，并递归执行"></a>include指令所引入的每个文件都需要经历一到四阶段，并递归执行</h1><p>此阶段结束时，从源码移除所有预处理器指令</p>
+<h4 id="第五阶段！！每次转换时的兼容性和方法"><a href="#第五阶段！！每次转换时的兼容性和方法" class="headerlink" title="第五阶段！！每次转换时的兼容性和方法"></a>第五阶段！！每次转换时的兼容性和方法</h4><p>将字符常量及字符串字面量中的所有字符及转义序列从源字符集转换成执行字符集(执行文件时文本信息用的字符集)(例UTF-8的多字节字符集)若转义序列所指定的字符不是执行字符集的成员，则结果需要看编译器具体实现，但保证不是空(宽)字符。</p>
+<p>注意：某些编译器，能以命令行选项控制此阶段所进行的转换，如gcc和clang<br>用-finput-charset指定源字符集的编码<br>用-fexec-charset和-fwide-exec-charset指定<code>无编码前缀的(C11)</code>字符串字面量和字符常量中的执行字符集的编码</p>
+<h4 id="第六阶段"><a href="#第六阶段" class="headerlink" title="第六阶段"></a>第六阶段</h4><p>连接相邻的字符串字面量</p>
+<h4 id="第七阶段"><a href="#第七阶段" class="headerlink" title="第七阶段"></a>第七阶段</h4><p>编译：按照语法和语义分析记号，将每个文件作为翻译单元(.c)，依次编译为相应的对象文件(.o)</p>
+<h4 id="第八阶段"><a href="#第八阶段" class="headerlink" title="第八阶段"></a>第八阶段</h4><p>链接：将翻译单元和程序所依赖的第三方库链接为镜像文件(可执行文件、静态库或动态库)它含有在其执行环境(操作系统)中执行所需的信息</p>
+<h1 id="——————————————————"><a href="#——————————————————" class="headerlink" title="——————————————————"></a>——————————————————</h1><h3 id="文件-基础源-执行-字符集"><a href="#文件-基础源-执行-字符集" class="headerlink" title="文件/基础源/执行 字符集"></a>文件/基础源/执行 字符集</h3><h3 id="未定义行为"><a href="#未定义行为" class="headerlink" title="未定义行为"></a>未定义行为</h3><h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>语法：<br>/*注释*/    c语言风格<br><code>//注释        cpp风格(C99)</code></p>
+<p>注意：</p>
+<ul>
+<li><p>因为注释在预处理器阶段前，宏不能用于组成注释，而不终止的 C 风格注释不会从被 #include 的文件中漏出</p>
+</li>
+<li><p>C99 中引入 // 注释，在一些场合是破坏性更改</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = b <span class="comment">//*除数：*/ c</span></span><br><span class="line">+ d; </span><br><span class="line"><span class="comment">/* C89 编译为 a = b / c + d;C99 编译为 a = b + d; */</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="转义序列"><a href="#转义序列" class="headerlink" title="转义序列"></a>转义序列</h3><p>ISO C 要求诊断是否有任何不列于此的字符出现于反斜杠之后<br><img src="E:\my_blog_luq\source\other\转义序列.png" alt="转义序列"></p>
+<h4 id="ASCII数值转义码表"><a href="#ASCII数值转义码表" class="headerlink" title="ASCII数值转义码表"></a>ASCII数值转义码表</h4><p><img src="E:\my_blog_luq\source\other\ascii.png" alt="ascii"></p>
+<h4 id="Unicode转义通用字符"><a href="#Unicode转义通用字符" class="headerlink" title="Unicode转义通用字符"></a>Unicode转义通用字符</h4><p><code>可用通用字符名的范围(C99)</code><br>若通用字符名对应<br>除0x24($),0x40(@),0x60(`)外的小于 0xA0 的码位<br>代理码位(0xD800-0xDFFF,含两端)<br><code>大于0x10FFFF(即不是Unicode码位)(C23)</code><br>则程序为非良构(程序无法编译)<br>换言之，基础源字符集与控制字符(0x0-0x1F与0x7F-0x9F中)不能以通用字符名表达</p>
+<p>注意：</p>
+<ul>
+<li>\0 在八进制转义序列中最常用(警惕这里不是十进制，即\32不代表空格)，因为它表示空终止字符串中的空终止字符八进制转义序列拥有三个八进制位的长度限制，但若提前遇到不是合法八进制位的字符，则在首个这种字符处终止<br>换行符\n在用于文本模式I/O时有特殊含义，它被转换为 OS 限定的换行表示，通常是字节或字节序列，某些系统替而用长度域标记其文本行</li>
+<li>十六进制转义序列无长度限制，并在首个不是合法十六进制位的字符处终止，若单个十六进制转义序列所表示的值不适于此字符串字面量或字符常量中使用的字符类型(char、char16_t、char32_t (C11)`或 wchar_t)则结果未指定</li>
+<li>通用字符名可能映射到多于一个编码单元</li>
+<li>问号转义序列\?用于阻止在字符串字面量内转译三标符(三字符组)</li>
+</ul>
+<h3 id="头文件"><a href="#头文件" class="headerlink" title="头文件"></a>头文件</h3><h3 id="标识符"><a href="#标识符" class="headerlink" title="标识符"></a>标识符</h3><p>标识符是区分大小写的以拉丁字母、下划线<code>或Unicode非数字字符(C99)</code>开始的以数字、下划线、小写及大写拉丁字母和以<code>\u及\U指定的Unicode字符 (C99)</code>组成的有限长度序列<br><code>内部标识符或宏名中31/63个有效起始字符
+外部标识符中6/31个有效起始字符
+一个翻译单元中511/4095个外部标识符
+一个块中声明127/511个拥有块作用域的标识符</code><br><code>一个预处理翻译单元中同时定义1024/4095个宏标识符(C99前/后)</code></p>
+<p>宏名或宏形参名以外的每个标识符都拥有作用域，属于命名空间，并且可以拥有链接，相同的标识符可以在程序的相异点指代相异实体，或若实体在不同的命名空间中，则可在相同点指代相异实体</p>
+<p>保留标识符(声明会产生未定义行为)：关键字，以下划线开始的外部标识符，以双下划线开始符或下划线随大写字母开始的标识符(保留标识符允许库使用大量幕后的非外部宏及函数)，标准库所提供的每个标识符，<a target="_blank" rel="noopener" href="https://zh.cppreference.com/w/c/language/identifier"><code>潜保留标识符(C23可用)</code></a></p>
+<h4 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h4><p>每个标识符都仅在一些可能不连续的部分可见(使用)，这些部分被称为该标识符的作用域，在作用域内，标识符仅若在不同命名空间中，才可以指代多于一个实体，作用域有四种：块作用域，文件作用域，函数作用域，函数原型作用域</p>
+<p>一般标识符的作用域，在声明点开始，在声明于其中的块或语句的结尾结束<br>特殊：<br>声明于函数内部的标号有函数作用域，在该函数中的所有位置都在作用域内，但注意：任何语句前的冒号前的标识符，若不用于其他用途，则隐式声明为标号<br>结构体、联合体及枚举标签的作用域，在声明完该标签后(声明列表前)立即开始<br>枚举常量的作用域，在枚举项列表中其定义枚举项的出现后立即开始</p>
+<p>若相同标识符所命名的不同实体，同一时刻都在同一作用域中，则内层作用域中的声明隐藏外层作用域中的声明<code>尽管若在语句中使用复合语句，则它拥有其通常的块作用域(C99前)</code></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//此处的命名空间为通常标识符。</span></span><br><span class="line"><span class="type">int</span> a;<span class="comment">//文件作用域</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">f</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> a = <span class="number">1</span>; <span class="comment">//块作用域，隐藏文件作用域</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="type">int</span> a = <span class="number">2</span>;<span class="comment">//内层块作用域，隐藏外层块作用域</span></span><br><span class="line">      <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);<span class="comment">//打印2</span></span><br><span class="line">    &#125;<span class="comment">//内层块作用域结束                    </span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, a);<span class="comment">//打印1</span></span><br><span class="line">&#125;<span class="comment">//外层块作用域结束                        </span></span><br><span class="line"><span class="type">void</span> <span class="title function_">g</span><span class="params">(<span class="type">int</span> a)</span>;<span class="comment">//函数原型作用域，隐藏文件作用域</span></span><br></pre></td></tr></table></figure>
+<h4 id="查找与命名空间"><a href="#查找与命名空间" class="headerlink" title="查找与命名空间"></a>查找与命名空间</h4><p>遇到标识符时，根据使用方式在所属的命名空间中查找该标识符<br>不同命名空间的同一标识符可以同时出现在同一作用域中</p>
+<p>标号命名空间：所有声明为标号的标识符<br>标签命名空间：所有声明为struct ,union,enum名称的标识符(这三种标签共享同一命名空间)<br>成员命名空间：所有声明为struct或union成员的标识符(每个结构体和联合体引入它自己的这种命名空间)<br><code>全局属性命名空间：标准定义的属性记号或实现定义的属性前缀
+非标准属性命名空间：属性前缀后的属性名(每个属性都有一个单独的名称空间用于引入的实现定义的属性)(C23)</code><br>通常标识符命名空间：所有其他标识符(函数名,对象名, typedef名,枚举常量)</p>
+<p>作为goto语句运算数出现的标识符，会在标号命名空间中查找<br>struct,union,enum的标识符，会在标签命名空间中查找<br>成员访问的标识符，会在类型成员命名空间中查找(该类型由成员访问运算符左运算数确定)<br><code>直接出现于属性说明符[[...]]中的标识符，会在全局属性命名空间中查找
+跟在::属性前缀后面的标识符，会在属性前缀所引入命名空间中查找(C23)</code><br>其他标识符，会在通常命名空间中查找</p>
+<p>宏的名称不是任何名称空间的一部分，它们在语义分析之前被预处理器替换</p>
+<p>通常的做法是使用typedef声明将结构/联合/枚举名称注入到普通标识符的名称空间中</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">foo</span> <span class="params">(<span class="type">void</span>)</span> &#123; <span class="keyword">return</span>; &#125; <span class="comment">//通常命名空间，文件作用域</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">foo</span> &#123;</span>      <span class="comment">//标签命名空间，文件作用域</span></span><br><span class="line">    <span class="type">int</span> foo;      <span class="comment">//struct foo类的的成员命名空间，文件作用域</span></span><br><span class="line">    <span class="class"><span class="keyword">enum</span> <span class="title">bar</span> &#123;</span>    <span class="comment">//标签命名空间，文件作用域</span></span><br><span class="line">        RED       <span class="comment">//通常命名空间，文件作用域</span></span><br><span class="line">    &#125; bar;        <span class="comment">//struct foo类的成员命名空间，文件作用域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">foo</span>* <span class="title">p</span>;</span><span class="comment">//标签命名空间/文件作用域</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">bar</span> <span class="title">x</span>;</span> <span class="comment">//标签命名空间/文件作用域</span></span><br><span class="line"><span class="comment">//int foo; //查找通常命名空间/文件作用域已有foo报错</span></span><br><span class="line"><span class="comment">//union foo &#123; int a, b; &#125;; //查找标签命名空间/文件作用域已有foo报错</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">goto</span> foo; <span class="comment">//查找标号命名空间/函数作用域</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">foo</span> &#123;</span> <span class="comment">//标签命名空间/块作用域，文件作用域隐藏</span></span><br><span class="line">       <span class="class"><span class="keyword">enum</span> <span class="title">bar</span> <span class="title">x</span>;</span> <span class="comment">//查找标签命名空间/文件作用域</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">foo</span> <span class="title">foo</span>;</span> </span><br><span class="line">    <span class="comment">//查找标签命名空间/块作用域</span></span><br><span class="line">    <span class="comment">//通常命名空间，块作用域的，文件作用域隐藏</span></span><br><span class="line">    (foo)&#123;.x=RED&#125;; </span><br><span class="line">    <span class="comment">//查找通常命名空间/块作用域</span></span><br><span class="line">    <span class="comment">//查找通常命名空间/文件作用域</span></span><br><span class="line">foo:;<span class="comment">//标号命名空间，函数作用域</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h4><p>对象是执行环境中数据储存的区域，其内容可以表示值(值是转译为特定类型时的内容)<br>每个对象的属性有：标识符，有效类型，大小，对齐要求，值，储存器，生存期<br>对象由声明、分配函数、字符串字面量、复合字面量、以及返回拥有数组类型的struct/union的非左值表达式创建</p>
+<h5 id="对象表示"><a href="#对象表示" class="headerlink" title="对象表示"></a>对象表示</h5><p>除了位字段，对象由一个或多个字节的连续序列组成，每个字节由CHAR_BIT位组成，可以复制memcpy到一个类型的对象中unsigned char[n]，其中n为对象的大小，结果数组的内容被称为对象表示</p>
+<p>若对象的对象表示相同，则它们比较时相等（除了它们是浮点数NaN的情况）。但比较时相等的对象，可以有不同的对象表示。因为并非对象表示的每一位都需要参与其值，这些位可以用于填充以满足对齐要求，等同性检测，指示陷阱表示等</p>
+<h5 id="有效类型"><a href="#有效类型" class="headerlink" title="有效类型"></a>有效类型</h5><p>用于决定合法左值访问的方式，声明类型即为有效类型<br>对于分配的无有效类型对象，在第一次    写入非字符类型|复制内存|其他访问    时获得类型</p>
+<h5 id="严格别名使用"><a href="#严格别名使用" class="headerlink" title="严格别名使用"></a>严格别名使用</h5><p>对象应仅由具有以下类型之一的左值表达式访问其存储值，否则结果未定义(大部分已经实现定义)<br>兼容类型,char,signed char,unsigned char,有效类型的有无符号类型,无限递归下去能包含有效类型的联和或聚合体!!!</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ashjn2011/article/details/9627405?ops_request_misc=&amp;request_id=&amp;biz_id=102&amp;utm_term=严格别名规则&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-2-9627405.142^v47^pc_rank_34_default_3,201^v3^control&amp;spm=1018.2226.3001.4187">类型双关(type punning)与严格别名(strict aliasing)_凄凉赤的博客-CSDN博客</a></p>
+<h5 id="生存期"><a href="#生存期" class="headerlink" title="生存期"></a>生存期</h5><p>每个对象都有一个常量地址，用于保留其最后存储的值(除非该值不确定)<code>对于 VLA还要保留长度(C99)</code>；对于声明有自动、静态及线程存储期的对象，生存期等于其存储期，对于拥有分配存储期的对象，始于内存分配终于释放内存，注意分配的内存无类型，在首次访问时才成为有效类型</p>
+<p>在生存期外访问对象是未定义行为，指向生存期结束的对象的指针拥有不确定值</p>
+<p>非左值表达式指代的带有结构或联合类型中包含具有数组类型的成员拥有临时生存期，临时生存期始于求值指代该对象的表达式，<code>终于下一个序列点(C11前)包含它的完整表达式或完整声明器结束(C11)</code></p>
+<p>任何修改临时生存期对象的尝试会导致未定义行为</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">T</span> &#123;</span> <span class="type">double</span> a[<span class="number">4</span>]; &#125;;</span><br><span class="line"><span class="keyword">struct</span> T <span class="title function_">f</span><span class="params">(<span class="type">void</span>)</span> &#123; <span class="keyword">return</span> (<span class="keyword">struct</span> T)&#123;<span class="number">3.15</span>&#125;; &#125;</span><br><span class="line"><span class="type">double</span> <span class="title function_">g1</span><span class="params">(<span class="type">double</span>* x)</span> &#123; <span class="keyword">return</span> *x; &#125;</span><br><span class="line"><span class="type">void</span> <span class="title function_">g2</span><span class="params">(<span class="type">double</span>* x)</span> &#123; *x = <span class="number">1.0</span>; &#125;</span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">double</span> d = g1(f().a); </span><br><span class="line">    <span class="comment">// C99,UB,访问生存期结束于序列点</span></span><br><span class="line">    <span class="comment">// C11,OK,d为3.15</span></span><br><span class="line">    g2(f().a); </span><br><span class="line">    <span class="comment">//C99,UB,修改生存期结束于序列点</span></span><br><span class="line">    <span class="comment">//C11,UB,试图修改临时对象</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="对齐"><a href="#对齐" class="headerlink" title="对齐"></a>对齐</h5><p>每个完整类型拥有一个称作对齐要求的属性，它是一个size_t类型的整数值，表示此类型对象可以分配的    连续内存之间    的字节数，每个对象类型将其对齐要求强加于该类型的任何一个对象<br>所有类型中，最最大的基础对齐是max_align_t，最小的对齐是字符类型</p>
+<p><code>类型的对齐要求可以通过_Alignof获得(C11)</code></p>
+<p>为了满足结构体所有对象的对齐要求，一些成员后面可能会插入填充位</p>
+<p>若用_Alignas令一个对象的对齐大于max_align_t，则它拥有扩展对齐要求<br>成员拥有扩展对齐的结构体或联合体是   过对齐类型<br>是否支持过对齐类型是实现定义的，而且对于每种存储期的支持可以不同</p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><h5 id="main函数！！！"><a href="#main函数！！！" class="headerlink" title="main函数！！！"></a>main函数！！！</h5><p>int main(void){body}<br>int main(int arg,char<em>argv[]){body}<br>`/</em>其他*/(C99)`</p>
+<p>名称argc和argv表示参数计数和参数向量<br>argv有argc+1个，argv末元素是空字符串，argc&gt;0则argv[0]为程序运行的全路径名<br>main的常见实现定义形式是int main(int argc, char *argv[], char *envp[])<br>其中第三参数指向执行环境变量</p>
+<p>main若return，则其返回值会作为隐式调用exit()的参数，0与EXIT_SUCCESS表示成功终止，EXIT_FAILURE表示不成功终止</p>
+<h4 id="标签"><a href="#标签" class="headerlink" title="标签"></a>标签</h4><h4 id="结构体或联合体成员"><a href="#结构体或联合体成员" class="headerlink" title="结构体或联合体成员"></a>结构体或联合体成员</h4><h4 id="枚举常量"><a href="#枚举常量" class="headerlink" title="枚举常量"></a>枚举常量</h4><h4 id="typedef名"><a href="#typedef名" class="headerlink" title="typedef名"></a>typedef名</h4><h4 id="标号名"><a href="#标号名" class="headerlink" title="标号名"></a>标号名</h4><h4 id="宏名"><a href="#宏名" class="headerlink" title="宏名"></a>宏名</h4><h4 id="宏形参名"><a href="#宏形参名" class="headerlink" title="宏形参名"></a>宏形参名</h4><h3 id="常量与字面量"><a href="#常量与字面量" class="headerlink" title="常量与字面量"></a>常量与字面量</h3><p> [整数常量 integer_constant)<br> [浮点常量 floating_constant)<br> [字符常量 character_constant)<br> [<code>true</code>/<code>false</code> bool_constant)(C23)<br> [<code>nullptr</code> nullptr)(C23)<br> [字符串字面量 string_literal)<br> [复合字面量 compound_literal)(C99)</p>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><h3 id="标点及其含义"><a href="#标点及其含义" class="headerlink" title="标点及其含义"></a>标点及其含义</h3><p>{ }<br>在struct或union定义中划分出结构体声明列表<br>在enum定义中划分出枚举列表<br>划分出复合语句，复合语句可以是函数定义的一部分<br>初始化时，划分出初始化器列表</p>
+<p>[ ]<br>下标运算符<br>声明或类型标识中，数组声明符的一部分<br><code>初始化时，指派数组元素(C99)</code><br><code>属性说明符中，划分出属性(C23)</code></p>
+<p>#<br>预处理指令起始标志<br>字符串化的预处理操作</p>
+<p>##<br>用于连接字符串的预处理操作</p>
+<p>( )<br>表达式分组，改变结合顺序<br>声明或类型标识中分组，改变结合顺序<br>函数声明中划分出参数列表<br>if、switch 、while、do或for语句中，划分出控制块<br>函数调用运算符<br>sizeof或<code>_Alignof(C11起)</code>表达式中划分出运算对象<br>显式类型转换中划分出类型标识<br><code>复合字面量中划分出标识(C99)</code><br>仿函数宏定义中，划分出宏参数<br>defined、<code>__has_include或__has_c_attribute预处理运算符的一部分(C23)</code>预处理运算符的一部分<br><code>泛型选择表达式 generic)的一部分(C11)</code><br><code>_Atomic类型说明符中,划分出类型标识(C11)</code><br><code>静态断言声明中，划分出操作对象(C11)</code><br><code>_Alignas说明符中，划分出操作对象(C11)</code><br><code>属性中, 划分出操作对象(C23)</code></p>
+<p>;<br>语句和声明和声明列表的结束标志<br>分隔for的()中的第二和第三子句</p>
+<p>:<br>条件运算符的一部分<br>标签声明的一部分<br>标志位域成员声明的宽度的起始<br><code>泛型关联中，分隔类型标识或default和待选表达式(C11)</code></p>
+<p>…<br>函数声明的参数列表中, 标志变长参数<br><code>宏定义中, 标志变参数宏(C99)</code></p>
+<p>?<br>条件运算符的一部分</p>
+<p>::<br><code>在属性中指示属性作用域(C23)</code></p>
+<p>.<br>成员访问运算符<br><code>在初始化时，标志struct/union成员指派符的起始(C99)</code></p>
+<p>-&gt;<br>成员访问运算符</p>
+<p>~<br>一元补运算符(又称逐位非运算符)</p>
+<p>! + - / % ^ &amp; |<br> -= *= %= ^= &amp;= |= +=<br>&lt;&lt; >><br>== != &lt;= >= &lt;&lt;= >>=<br>&amp;&amp; ||<br>++ —<br>运算符</p>
+<p>*<br>间接引用运算符(解引用运算符)<br>乘法运算符<br>声明符或类型标识中的指针运算符或成员指针运算符<br><code>函数声明的变长数组(参数)声明中的数组长度占位符(C99)</code></p>
+<p>=<br>简单赋值运算符<br>在初始化中，分隔对象和初始化列表<br>在枚举定义中引入枚举常量的值</p>
+<p>&lt;<br>小于运算符</p>
+<h1 id="include指令中标志头文件名起始。"><a href="#include指令中标志头文件名起始。" class="headerlink" title="include指令中标志头文件名起始。"></a>include指令中标志头文件名起始。</h1><p>><br>大于运算符</p>
+<h1 id="include指令中标志头文件名结束。"><a href="#include指令中标志头文件名结束。" class="headerlink" title="include指令中标志头文件名结束。"></a>include指令中标志头文件名结束。</h1><p>,<br>逗号运算符<br>以下列表的列表分隔符：<br>      声明中声明符列表<br>      <code>初始化，包括复合字面量中的初始化器列表(C99)</code><br>      函数调用中实参列表<br>      枚举声明中的枚举项列表<br>      仿函数宏定义中宏形参列表<br>      <code>泛型选择表达式)中泛型关联列表(C11)</code><br>     <code>属性列表(C23)</code><br><code>静态断言声明中分隔参数(C11)</code><br><code>泛型选择表达式中，分隔控制表达式和泛型关联列表(C11)</code></p>
+<h3 id="其他预处理记号"><a href="#其他预处理记号" class="headerlink" title="其他预处理记号"></a>其他预处理记号</h3><h4 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h4><h5 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h5><ul>
+<li><p>void</p>
+</li>
+<li><p>基本类型</p>
+<ul>
+<li>char</li>
+<li>有符号整型(signed char,short,int long,<code>long long与其他实现定义(C99)</code>)</li>
+<li>无符号整型(unsigned char,unsigned short,unsigned int,unsigned long,<code>_Bool(C99),unsigned long long与其他实现定义</code>)</li>
+<li>浮点类型<ul>
+<li>实浮点类型(float,double,long double)</li>
+<li><code>十进制实浮点类型(_Decimal32 、 _Decimal64 、 _Decimal128)(C23)</code></li>
+<li><code>复数类型(float _Complex 、 double _Complex 、 long double _Complex)(C99)</code></li>
+<li><code>虚数类型(float _Imaginary 、 double _Imaginary 、 long double _Imaginary)(C99)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>枚举类型</p>
+</li>
+<li><p>派生类型：数组，结构体，联合体，函数，指针，<code>原子(C11)</code></p>
+</li>
+</ul>
+<p>对于以上类型，可以用const,volatile,restrict(的组合)进行限定</p>
+<p>在不同翻译单元中涉及同一对象或函数的声明，不必拥有相同类型，只需要拥有相似的类型即可兼容：<br>同一类型(typedef引入的别名)，指向兼容类型的指针，元素兼容大小相同的数组类型，<code>VLA(C99)</code>，<code>同一标签声明的(C99)</code>同成员数和顺序且对应位域宽度相同的结构体类型，<code>同一标签声明的(C99)</code>同成员数且对应位域宽度相同的联合体类型，<code>同一标签声明的(C99)</code>同成员数和相同值且为另一枚举的底层类型的枚举类型，返回类型兼容参数数量和类型相同<br>char与signed char和unsigned char都不兼容<br>若涉及同一对象或函数的二个声明不使用兼容类型，则程序的行为未定义</p>
+<p>合成类型可以由两种兼容的类型构成，它是与这两种类型兼容并满足以下条件的类型：<br>其中一个类型是已知常量大小的数组，则复合类型是该大小的数组，<code>否则：如果一种类型是 VLA，其大小由未计算的表达式指定，则行为未定义；如果一个类型是指定了其大小的 VLA，则该复合类型为该大小的 VLA；如果一个类型是未指定大小的 VLA，则该复合类型是未指定大小的VLA(C99)</code>，对于函数参数列表则是一 一复合后合并派生</p>
+<p>未指定大小的VLA和未知内容的结构体为不完整类型，void不可以完整</p>
+<p>类型说明符允许任意顺序：unsigned long long int和long int unsigned long相同，unsigned int和int unsigned相同</p>
+<h6 id="算术类型"><a href="#算术类型" class="headerlink" title="算术类型"></a>算术类型</h6><p><code>_Bool非0即1(C99)</code></p>
+<p>标准定义了typedef名wchar_t,<code>char16_t,char32_t(C11)</code>以表示宽字符</p>
+<p>1==sizeof(char)&lt;=sizeof(short)&lt;=sizeof(int)&lt;=sizeof(long)&lt;=sizeof(long long)</p>
+<p>若支持浮点数则匹配IEEE-754 binary32/84/128格式<br>若实现预定义宏常量__STDC_IEC_60559_DFP__则支持十进制浮点类型<br>浮点类型支持±INFINITY<br>浮点类型支持非数NaN(表示未定义或不可表示的值)</p>
+<ul>
+<li>至少有一个参数是NaN的运算</li>
+<li>不定式(0:0型，∞:∞型，∞-∞型)</li>
+<li>产生复数结果的实数运算</li>
+</ul>
+<p>一些浮点数上的运算会受到浮点环境的影响(注意舍入方向)<br>实浮点类型与整数、复数和虚数类型间的隐式转换有定义</p>
+<p>复浮点类型可以写成    “%f%+(可选格式符)fi”,creal(z) + I*cimag(z)    即a+bi<br>数组的第一元素保有实部，第二个元素保有虚部<br><code>若实现定义了__STDC_NO_COMPLEX__则不提供复数类型(C11)</code><br>虚浮点类型同上<br><code>若定义__STDC_IEC_559_COMPLEX__ (C23 前)__STDC_IEC_60559_COMPLEX__(C23)则支持虚数</code></p>
+<h3 id="预处理器"><a href="#预处理器" class="headerlink" title="预处理器"></a>预处理器</h3><p>main</p>
+<p>内存模型，数据竞争</p>
+<h3 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h3><h1 id="——————————————————-1"><a href="#——————————————————-1" class="headerlink" title="——————————————————"></a>——————————————————</h1><h1 id="库"><a href="#库" class="headerlink" title="库"></a>库</h1><h2 id="标准库"><a href="#标准库" class="headerlink" title="标准库"></a>标准库</h2><h2 id="外部库"><a href="#外部库" class="headerlink" title="外部库"></a>外部库</h2></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Luq</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://calm-luq.github.io/2022/09/09/c%E8%AF%AD%E8%A8%80%E6%B1%87%E6%80%BB/">https://calm-luq.github.io/2022/09/09/c%E8%AF%AD%E8%A8%80%E6%B1%87%E6%80%BB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://calm-luq.github.io" target="_blank">calm-luq-blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/c/">c</a></div><div class="post_share"><div class="social-share" data-image="/cover&amp;top_img/c.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2022/07/28/Cmake/"><img class="next-cover" src="/img/cover.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Cmake</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/04/14/C%E8%AF%AD%E8%A8%80%E5%BA%93/" title="c语言库"><img class="cover" src="/cover&top_img/c.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-14</div><div class="title">c语言库</div></div></a></div><div><a href="/2022/03/11/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="C语言学习笔记"><img class="cover" src="/cover&top_img/c.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-11</div><div class="title">C语言学习笔记</div></div></a></div><div><a href="/2022/07/21/C%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE/" title="C语言项目"><img class="cover" src="/cover&top_img/c.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-07-21</div><div class="title">C语言项目</div></div></a></div><div><a href="/2022/06/11/C%E8%AF%AD%E8%A8%80%E8%A1%A5%E5%85%85/" title="C语言补充"><img class="cover" src="/cover&top_img/c.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-11</div><div class="title">C语言补充</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/face.jpg" onerror="this.onerror=null;this.src='/img/friend_404.jpg'" alt="avatar"/></div><div class="author-info__name">Luq</div><div class="author-info__description"></div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">9</div></a></div></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/calm-luq"><i class="fab fa-github"></i><span>My github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/calm-luq" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2307577741@qq.com" target="_blank" title="QQ.mail"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#C-%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-number">1.</span> <span class="toc-text">C 的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A9%E6%9C%9F-C"><span class="toc-number">1.1.</span> <span class="toc-text">早期 C</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86-C"><span class="toc-number">1.2.</span> <span class="toc-text">标准 C</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E6%9D%A5%E5%8F%91%E5%B1%95"><span class="toc-number">1.2.1.</span> <span class="toc-text">未来发展</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#C%E8%AF%AD%E8%A8%80%E5%86%85%E5%AE%B9"><span class="toc-number">2.</span> <span class="toc-text">C语言内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80"><span class="toc-number">2.1.</span> <span class="toc-text">语言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%96%E8%AF%91%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.1.</span> <span class="toc-text">编译流程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%98%B6%E6%AE%B5"><span class="toc-number">2.1.1.1.</span> <span class="toc-text">第一阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5"><span class="toc-number">2.1.1.2.</span> <span class="toc-text">第二阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5"><span class="toc-number">2.1.1.3.</span> <span class="toc-text">第三阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5"><span class="toc-number">2.1.1.4.</span> <span class="toc-text">第四阶段</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#include%E6%8C%87%E4%BB%A4%E6%89%80%E5%BC%95%E5%85%A5%E7%9A%84%E6%AF%8F%E4%B8%AA%E6%96%87%E4%BB%B6%E9%83%BD%E9%9C%80%E8%A6%81%E7%BB%8F%E5%8E%86%E4%B8%80%E5%88%B0%E5%9B%9B%E9%98%B6%E6%AE%B5%EF%BC%8C%E5%B9%B6%E9%80%92%E5%BD%92%E6%89%A7%E8%A1%8C"><span class="toc-number">3.</span> <span class="toc-text">include指令所引入的每个文件都需要经历一到四阶段，并递归执行</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%94%E9%98%B6%E6%AE%B5%EF%BC%81%EF%BC%81%E6%AF%8F%E6%AC%A1%E8%BD%AC%E6%8D%A2%E6%97%B6%E7%9A%84%E5%85%BC%E5%AE%B9%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95"><span class="toc-number">3.0.0.1.</span> <span class="toc-text">第五阶段！！每次转换时的兼容性和方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%85%AD%E9%98%B6%E6%AE%B5"><span class="toc-number">3.0.0.2.</span> <span class="toc-text">第六阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%83%E9%98%B6%E6%AE%B5"><span class="toc-number">3.0.0.3.</span> <span class="toc-text">第七阶段</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%85%AB%E9%98%B6%E6%AE%B5"><span class="toc-number">3.0.0.4.</span> <span class="toc-text">第八阶段</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94"><span class="toc-number">4.</span> <span class="toc-text">——————————————————</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6-%E5%9F%BA%E7%A1%80%E6%BA%90-%E6%89%A7%E8%A1%8C-%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="toc-number">4.0.1.</span> <span class="toc-text">文件&#x2F;基础源&#x2F;执行 字符集</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%AA%E5%AE%9A%E4%B9%89%E8%A1%8C%E4%B8%BA"><span class="toc-number">4.0.2.</span> <span class="toc-text">未定义行为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">4.0.3.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E4%B9%89%E5%BA%8F%E5%88%97"><span class="toc-number">4.0.4.</span> <span class="toc-text">转义序列</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#ASCII%E6%95%B0%E5%80%BC%E8%BD%AC%E4%B9%89%E7%A0%81%E8%A1%A8"><span class="toc-number">4.0.4.1.</span> <span class="toc-text">ASCII数值转义码表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unicode%E8%BD%AC%E4%B9%89%E9%80%9A%E7%94%A8%E5%AD%97%E7%AC%A6"><span class="toc-number">4.0.4.2.</span> <span class="toc-text">Unicode转义通用字符</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-number">4.0.5.</span> <span class="toc-text">头文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E8%AF%86%E7%AC%A6"><span class="toc-number">4.0.6.</span> <span class="toc-text">标识符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8%E5%9F%9F"><span class="toc-number">4.0.6.1.</span> <span class="toc-text">作用域</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E4%B8%8E%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-number">4.0.6.2.</span> <span class="toc-text">查找与命名空间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.0.6.3.</span> <span class="toc-text">对象</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%E8%A1%A8%E7%A4%BA"><span class="toc-number">4.0.6.3.1.</span> <span class="toc-text">对象表示</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%9C%89%E6%95%88%E7%B1%BB%E5%9E%8B"><span class="toc-number">4.0.6.3.2.</span> <span class="toc-text">有效类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%A5%E6%A0%BC%E5%88%AB%E5%90%8D%E4%BD%BF%E7%94%A8"><span class="toc-number">4.0.6.3.3.</span> <span class="toc-text">严格别名使用</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%94%9F%E5%AD%98%E6%9C%9F"><span class="toc-number">4.0.6.3.4.</span> <span class="toc-text">生存期</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E9%BD%90"><span class="toc-number">4.0.6.3.5.</span> <span class="toc-text">对齐</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">4.0.6.4.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#main%E5%87%BD%E6%95%B0%EF%BC%81%EF%BC%81%EF%BC%81"><span class="toc-number">4.0.6.4.1.</span> <span class="toc-text">main函数！！！</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE"><span class="toc-number">4.0.6.5.</span> <span class="toc-text">标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E6%88%96%E8%81%94%E5%90%88%E4%BD%93%E6%88%90%E5%91%98"><span class="toc-number">4.0.6.6.</span> <span class="toc-text">结构体或联合体成员</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9E%9A%E4%B8%BE%E5%B8%B8%E9%87%8F"><span class="toc-number">4.0.6.7.</span> <span class="toc-text">枚举常量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#typedef%E5%90%8D"><span class="toc-number">4.0.6.8.</span> <span class="toc-text">typedef名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E5%8F%B7%E5%90%8D"><span class="toc-number">4.0.6.9.</span> <span class="toc-text">标号名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8F%E5%90%8D"><span class="toc-number">4.0.6.10.</span> <span class="toc-text">宏名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%8F%E5%BD%A2%E5%8F%82%E5%90%8D"><span class="toc-number">4.0.6.11.</span> <span class="toc-text">宏形参名</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E4%B8%8E%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="toc-number">4.0.7.</span> <span class="toc-text">常量与字面量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">4.0.8.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%82%B9%E5%8F%8A%E5%85%B6%E5%90%AB%E4%B9%89"><span class="toc-number">4.0.9.</span> <span class="toc-text">标点及其含义</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#include%E6%8C%87%E4%BB%A4%E4%B8%AD%E6%A0%87%E5%BF%97%E5%A4%B4%E6%96%87%E4%BB%B6%E5%90%8D%E8%B5%B7%E5%A7%8B%E3%80%82"><span class="toc-number">5.</span> <span class="toc-text">include指令中标志头文件名起始。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#include%E6%8C%87%E4%BB%A4%E4%B8%AD%E6%A0%87%E5%BF%97%E5%A4%B4%E6%96%87%E4%BB%B6%E5%90%8D%E7%BB%93%E6%9D%9F%E3%80%82"><span class="toc-number">6.</span> <span class="toc-text">include指令中标志头文件名结束。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E9%A2%84%E5%A4%84%E7%90%86%E8%AE%B0%E5%8F%B7"><span class="toc-number">6.0.1.</span> <span class="toc-text">其他预处理记号</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">6.0.1.1.</span> <span class="toc-text">关键字</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B"><span class="toc-number">6.0.1.1.1.</span> <span class="toc-text">类型</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E7%AE%97%E6%9C%AF%E7%B1%BB%E5%9E%8B"><span class="toc-number">6.0.1.1.1.1.</span> <span class="toc-text">算术类型</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%84%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">6.0.2.</span> <span class="toc-text">预处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90"><span class="toc-number">6.0.3.</span> <span class="toc-text">语法分析</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94%E2%80%94-1"><span class="toc-number">7.</span> <span class="toc-text">——————————————————</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%93"><span class="toc-number">8.</span> <span class="toc-text">库</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E5%BA%93"><span class="toc-number">8.1.</span> <span class="toc-text">标准库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E5%BA%93"><span class="toc-number">8.2.</span> <span class="toc-text">外部库</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2022/09/09/c%E8%AF%AD%E8%A8%80%E6%B1%87%E6%80%BB/" title="c语言汇总"><img src="/cover&amp;top_img/c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="c语言汇总"/></a><div class="content"><a class="title" href="/2022/09/09/c%E8%AF%AD%E8%A8%80%E6%B1%87%E6%80%BB/" title="c语言汇总">c语言汇总</a><time datetime="2022-09-08T16:27:40.000Z" title="发表于 2022-09-09 00:27:40">2022-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/28/Cmake/" title="Cmake"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Cmake"/></a><div class="content"><a class="title" href="/2022/07/28/Cmake/" title="Cmake">Cmake</a><time datetime="2022-07-28T04:45:26.000Z" title="发表于 2022-07-28 12:45:26">2022-07-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/25/Windows/" title="Windows"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Windows"/></a><div class="content"><a class="title" href="/2022/07/25/Windows/" title="Windows">Windows</a><time datetime="2022-07-25T11:45:39.000Z" title="发表于 2022-07-25 19:45:39">2022-07-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/21/C%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE/" title="C语言项目"><img src="/cover&amp;top_img/c.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C语言项目"/></a><div class="content"><a class="title" href="/2022/07/21/C%E8%AF%AD%E8%A8%80%E9%A1%B9%E7%9B%AE/" title="C语言项目">C语言项目</a><time datetime="2022-07-21T06:43:30.000Z" title="发表于 2022-07-21 14:43:30">2022-07-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/07/20/vim/" title="vim"><img src="/img/cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vim"/></a><div class="content"><a class="title" href="/2022/07/20/vim/" title="vim">vim</a><time datetime="2022-07-20T09:33:37.000Z" title="发表于 2022-07-20 17:33:37">2022-07-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 By Luq</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">welcome to my blog</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">本地搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script></div><div class="aplayer no-destroy" data-id="6668457648" data-server="netease" data-type="playlist" data-fixed="true" data-mini="true" data-autoplay="false"> </div><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/click-heart.min.js" async="async" mobile="false"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="/true"></script><script>let pjaxSelectors = ["title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"log":false});</script></body></html>
